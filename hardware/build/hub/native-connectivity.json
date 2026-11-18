@@ -1,0 +1,231 @@
+{
+  "inputs": {
+    "board": {
+      "sha256": "53ba00cd6a077b4f545efc8a8295735c4c2749465453c4de1aef8b3e84b8fbe1"
+    }
+  },
+  "source_changed_during_audit": [],
+  "connected_pad_groups": {
+    "GND": [
+      [
+        "C6.2@44.0000,31.9500",
+        "J1.22@8.5700,67.3400",
+        "J3.1@31.4300,14.0000",
+        "J3.21@31.4300,64.8000",
+        "J3.22@31.4300,67.3400",
+        "SW1.2@39.0000,51.5000",
+        "SW1.2@45.5000,51.5000"
+      ]
+    ],
+    "unconnected-(J3-TX_GPIO43-Pad2)": [
+      [
+        "J3.2@31.4300,16.5400"
+      ]
+    ],
+    "unconnected-(J3-RX_GPIO44-Pad3)": [
+      [
+        "J3.3@31.4300,19.0800"
+      ]
+    ],
+    "unconnected-(J3-GPIO1-Pad4)": [
+      [
+        "J3.4@31.4300,21.6200"
+      ]
+    ],
+    "unconnected-(J3-GPIO2-Pad5)": [
+      [
+        "J3.5@31.4300,24.1600"
+      ]
+    ],
+    "unconnected-(J3-GPIO42-Pad6)": [
+      [
+        "J3.6@31.4300,26.7000"
+      ]
+    ],
+    "unconnected-(J3-GPIO41-Pad7)": [
+      [
+        "J3.7@31.4300,29.2400"
+      ]
+    ],
+    "unconnected-(J3-GPIO40-Pad8)": [
+      [
+        "J3.8@31.4300,31.7800"
+      ]
+    ],
+    "unconnected-(J3-GPIO39-Pad9)": [
+      [
+        "J3.9@31.4300,34.3200"
+      ]
+    ],
+    "unconnected-(J3-GPIO38-Pad10)": [
+      [
+        "J3.10@31.4300,36.8600"
+      ]
+    ],
+    "unconnected-(J3-GPIO37-Pad11)": [
+      [
+        "J3.11@31.4300,39.4000"
+      ]
+    ],
+    "unconnected-(J3-GPIO36-Pad12)": [
+      [
+        "J3.12@31.4300,41.9400"
+      ]
+    ],
+    "unconnected-(J3-GPIO35-Pad13)": [
+      [
+        "J3.13@31.4300,44.4800"
+      ]
+    ],
+    "unconnected-(J3-GPIO0-Pad14)": [
+      [
+        "J3.14@31.4300,47.0200"
+      ]
+    ],
+    "unconnected-(J3-GPIO45-Pad15)": [
+      [
+        "J3.15@31.4300,49.5600"
+      ]
+    ],
+    "unconnected-(J3-GPIO48-Pad16)": [
+      [
+        "J3.16@31.4300,52.1000"
+      ]
+    ],
+    "unconnected-(J3-GPIO47-Pad17)": [
+      [
+        "J3.17@31.4300,54.6400"
+      ]
+    ],
+    "unconnected-(J3-GPIO21-Pad18)": [
+      [
+        "J3.18@31.4300,57.1800"
+      ]
+    ],
+    "unconnected-(J3-USB_D+-Pad19)": [
+      [
+        "J3.19@31.4300,59.7200"
+      ]
+    ],
+    "unconnected-(J3-USB_D--Pad20)": [
+      [
+        "J3.20@31.4300,62.2600"
+      ]
+    ],
+    "+3V3": [
+      [
+        "J1.1@8.5700,14.0000",
+        "J1.2@8.5700,16.5400",
+        "R6.1@39.0000,25.0875"
+      ]
+    ],
+    "/CALIBRATE": [
+      [
+        "C6.1@44.0000,30.0500",
+        "J1.7@8.5700,29.2400",
+        "R6.2@39.0000,26.9125",
+        "R7.1@40.0000,36.0875"
+      ]
+    ],
+    "/SW": [
+      [
+        "R7.2@40.0000,37.9125",
+        "SW1.1@39.0000,47.0000",
+        "SW1.1@45.5000,47.0000"
+      ]
+    ],
+    "unconnected-(J1-RST-Pad3)": [
+      [
+        "J1.3@8.5700,19.0800"
+      ]
+    ],
+    "unconnected-(J1-GPIO4-Pad4)": [
+      [
+        "J1.4@8.5700,21.6200"
+      ]
+    ],
+    "unconnected-(J1-GPIO5-Pad5)": [
+      [
+        "J1.5@8.5700,24.1600"
+      ]
+    ],
+    "unconnected-(J1-GPIO6-Pad6)": [
+      [
+        "J1.6@8.5700,26.7000"
+      ]
+    ],
+    "unconnected-(J1-GPIO15-Pad8)": [
+      [
+        "J1.8@8.5700,31.7800"
+      ]
+    ],
+    "unconnected-(J1-GPIO16-Pad9)": [
+      [
+        "J1.9@8.5700,34.3200"
+      ]
+    ],
+    "unconnected-(J1-GPIO17-Pad10)": [
+      [
+        "J1.10@8.5700,36.8600"
+      ]
+    ],
+    "unconnected-(J1-GPIO18-Pad11)": [
+      [
+        "J1.11@8.5700,39.4000"
+      ]
+    ],
+    "unconnected-(J1-GPIO8-Pad12)": [
+      [
+        "J1.12@8.5700,41.9400"
+      ]
+    ],
+    "unconnected-(J1-GPIO3-Pad13)": [
+      [
+        "J1.13@8.5700,44.4800"
+      ]
+    ],
+    "unconnected-(J1-GPIO46-Pad14)": [
+      [
+        "J1.14@8.5700,47.0200"
+      ]
+    ],
+    "unconnected-(J1-GPIO9-Pad15)": [
+      [
+        "J1.15@8.5700,49.5600"
+      ]
+    ],
+    "unconnected-(J1-GPIO10-Pad16)": [
+      [
+        "J1.16@8.5700,52.1000"
+      ]
+    ],
+    "unconnected-(J1-GPIO11-Pad17)": [
+      [
+        "J1.17@8.5700,54.6400"
+      ]
+    ],
+    "unconnected-(J1-GPIO12-Pad18)": [
+      [
+        "J1.18@8.5700,57.1800"
+      ]
+    ],
+    "unconnected-(J1-GPIO13-Pad19)": [
+      [
+        "J1.19@8.5700,59.7200"
+      ]
+    ],
+    "unconnected-(J1-GPIO14-Pad20)": [
+      [
+        "J1.20@8.5700,62.2600"
+      ]
+    ],
+    "unconnected-(J1-5V-Pad21)": [
+      [
+        "J1.21@8.5700,64.8000"
+      ]
+    ]
+  },
+  "nonconforming_track_ids": [],
+  "disconnected_functional_nets": {},
+  "notes": "Read-only traversal of KiCad native connectivity. Native DRC separately checks zone islands and all physical pads."
+}

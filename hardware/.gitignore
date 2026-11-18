@@ -1,0 +1,16 @@
+# Editor state and regenerable caches.
+*.blend1
+*.kicad_prl
+~*.lck
+simulation/results/mpl-cache/
+
+# Retain the accepted exports; root-level build files are intermediate attempts.
+!/build/
+/build/*
+!/build/left/
+!/build/right/
+!/build/hub/
+!/build/*-expected.json
+
+# Solver logs are part of the retained numerical evidence.
+!/simulation/results/*.log

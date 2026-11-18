@@ -1,0 +1,59 @@
+{
+  "J1": {
+    "uuid": "46045f60-3fdd-5c6f-98f5-437bcc954c36",
+    "value": "1x22 SOCKET",
+    "footprint": "Connector_PinSocket_2.54mm:PinSocket_1x22_P2.54mm_Vertical",
+    "nets": {
+      "1": "+3V3",
+      "2": "+3V3",
+      "7": "CALIBRATE",
+      "22": "GND"
+    }
+  },
+  "J3": {
+    "uuid": "be7a2a9a-1b3d-5004-8269-047d4a18e730",
+    "value": "1x22 SOCKET",
+    "footprint": "Connector_PinSocket_2.54mm:PinSocket_1x22_P2.54mm_Vertical",
+    "nets": {
+      "1": "GND",
+      "21": "GND",
+      "22": "GND"
+    }
+  },
+  "R6": {
+    "uuid": "e3e84201-a4ee-56a8-8973-b2e5d62700c6",
+    "value": "10kR",
+    "footprint": "Resistor_SMD:R_0805_2012Metric",
+    "nets": {
+      "1": "+3V3",
+      "2": "CALIBRATE"
+    }
+  },
+  "C6": {
+    "uuid": "bd2b42fb-be1b-5408-be0e-a1efbd514312",
+    "value": "100nF",
+    "footprint": "Capacitor_SMD:C_0805_2012Metric",
+    "nets": {
+      "1": "CALIBRATE",
+      "2": "GND"
+    }
+  },
+  "R7": {
+    "uuid": "ab7df0aa-bd25-5f42-bdbc-70e38e530cbb",
+    "value": "1kR",
+    "footprint": "Resistor_SMD:R_0805_2012Metric",
+    "nets": {
+      "1": "CALIBRATE",
+      "2": "SW"
+    }
+  },
+  "SW1": {
+    "uuid": "61174224-20b5-5918-9abe-576336dfb2af",
+    "value": "CALIBRATE",
+    "footprint": "Button_Switch_THT:SW_PUSH_6mm",
+    "nets": {
+      "1": "SW",
+      "2": "GND"
+    }
+  }
+}

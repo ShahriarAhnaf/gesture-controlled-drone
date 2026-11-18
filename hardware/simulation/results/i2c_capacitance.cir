@@ -1,0 +1,38 @@
+* PalmPilot i2c_capacitance; extracted passive topology, explicit approximations
+VDD vdd 0 3.3
+VC ctl 0 PWL(0 1 1u 1 1.001u 0)
+.model SW SW(Ron=30 Roff=1e12 Vt=.5 Vh=.05)
+R0 vdd bus0 10500
+C0 bus0 0 20p
+S0 bus0 0 ctl 0 SW
+R1 vdd bus1 10500
+C1 bus1 0 50p
+S1 bus1 0 ctl 0 SW
+R2 vdd bus2 10500
+C2 bus2 0 100p
+S2 bus2 0 ctl 0 SW
+R3 vdd bus3 10500
+C3 bus3 0 112p
+S3 bus3 0 ctl 0 SW
+R4 vdd bus4 10500
+C4 bus4 0 120p
+S4 bus4 0 ctl 0 SW
+R5 vdd bus5 10500
+C5 bus5 0 150p
+S5 bus5 0 ctl 0 SW
+R6 vdd bus6 10500
+C6 bus6 0 200p
+S6 bus6 0 ctl 0 SW
+R7 vdd bus7 10500
+C7 bus7 0 400p
+S7 bus7 0 ctl 0 SW
+
+.options reltol=1e-6 abstol=1e-12 vntol=1e-8
+.control
+set wr_singlescale
+set wr_vecnames
+tran .5n 30u 0 .5n
+wrdata /Users/anoof/Documents/Codex/2026-11-17/https-github-com-samiurr10-gesture-controlled-2/work/gesture-controlled-drone/hardware/simulation/results/i2c_capacitance.dat v(bus0) v(bus1) v(bus2) v(bus3) v(bus4) v(bus5) v(bus6) v(bus7)
+quit
+.endc
+.end

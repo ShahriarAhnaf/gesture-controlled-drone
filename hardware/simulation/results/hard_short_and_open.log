@@ -1,0 +1,24 @@
+
+Note: No compatibility mode selected!
+
+
+Circuit: * palmpilot hard_short_and_open; extracted passive topology, explicit approximations
+
+Doing analysis at TEMP = 27.000000 and TNOM = 27.000000
+
+Using SPARSE 1.3 as Direct Linear Solver
+
+Initial Transient Solution
+--------------------------
+
+Node                                   Voltage
+----                                   -------
+vdd                                        3.3
+evt                                          0
+adc                                     2.1616
+vevent#branch                                0
+vrail#branch                      -4.55361e-05
+
+
+No. of Data Rows : 55076
+ngspice-47 done

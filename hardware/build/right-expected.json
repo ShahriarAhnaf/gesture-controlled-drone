@@ -1,0 +1,175 @@
+{
+  "J1": {
+    "uuid": "79f34980-deb6-5198-b500-6f9b83b9447a",
+    "value": "1x22 SOCKET",
+    "footprint": "Connector_PinSocket_2.54mm:PinSocket_1x22_P2.54mm_Vertical",
+    "nets": {
+      "1": "+3V3",
+      "2": "+3V3",
+      "4": "MIDDLE",
+      "5": "RING",
+      "6": "LITTLE",
+      "12": "SDA",
+      "15": "SCL",
+      "22": "GND"
+    }
+  },
+  "J3": {
+    "uuid": "43873843-a1fd-57c1-a1d9-190e152b9626",
+    "value": "1x22 SOCKET",
+    "footprint": "Connector_PinSocket_2.54mm:PinSocket_1x22_P2.54mm_Vertical",
+    "nets": {
+      "1": "GND",
+      "4": "THUMB",
+      "5": "INDEX",
+      "21": "GND",
+      "22": "GND"
+    }
+  },
+  "J4": {
+    "uuid": "06250e67-52a1-5e1b-9311-7e8c48dc9d60",
+    "value": "THUMB",
+    "footprint": "Connector_JST:JST_PH_B2B-PH-K_1x02_P2.00mm_Vertical",
+    "nets": {
+      "1": "+3V3",
+      "2": "THUMB"
+    }
+  },
+  "R1": {
+    "uuid": "fc6d3355-8c6d-527a-9682-88dab8a6f275",
+    "value": "47kR 1%",
+    "footprint": "Resistor_SMD:R_0805_2012Metric",
+    "nets": {
+      "1": "THUMB",
+      "2": "GND"
+    }
+  },
+  "C1": {
+    "uuid": "5d678cdf-f325-5ebe-8c48-ef19338993e0",
+    "value": "100nF",
+    "footprint": "Capacitor_SMD:C_0805_2012Metric",
+    "nets": {
+      "1": "THUMB",
+      "2": "GND"
+    }
+  },
+  "J5": {
+    "uuid": "818d01ec-67f9-5897-90dd-da30bc319411",
+    "value": "INDEX",
+    "footprint": "Connector_JST:JST_PH_B2B-PH-K_1x02_P2.00mm_Vertical",
+    "nets": {
+      "1": "+3V3",
+      "2": "INDEX"
+    }
+  },
+  "R2": {
+    "uuid": "3251ad26-eb80-544b-8165-4bda1cddd2f4",
+    "value": "47kR 1%",
+    "footprint": "Resistor_SMD:R_0805_2012Metric",
+    "nets": {
+      "1": "INDEX",
+      "2": "GND"
+    }
+  },
+  "C2": {
+    "uuid": "1121f9b6-1a48-56eb-974d-9eac0e2b6f27",
+    "value": "100nF",
+    "footprint": "Capacitor_SMD:C_0805_2012Metric",
+    "nets": {
+      "1": "INDEX",
+      "2": "GND"
+    }
+  },
+  "J6": {
+    "uuid": "2b7ef5c3-0cd4-5dee-93d7-27eaf6899ec3",
+    "value": "MIDDLE",
+    "footprint": "Connector_JST:JST_PH_B2B-PH-K_1x02_P2.00mm_Vertical",
+    "nets": {
+      "1": "+3V3",
+      "2": "MIDDLE"
+    }
+  },
+  "R3": {
+    "uuid": "d411503c-9ba1-52d0-8177-e9889445754a",
+    "value": "47kR 1%",
+    "footprint": "Resistor_SMD:R_0805_2012Metric",
+    "nets": {
+      "1": "MIDDLE",
+      "2": "GND"
+    }
+  },
+  "C3": {
+    "uuid": "2b79e133-167a-5647-9ea9-98dcc96e374a",
+    "value": "100nF",
+    "footprint": "Capacitor_SMD:C_0805_2012Metric",
+    "nets": {
+      "1": "MIDDLE",
+      "2": "GND"
+    }
+  },
+  "J7": {
+    "uuid": "213d7726-8331-5cf5-bf99-c8b6f15f820e",
+    "value": "RING",
+    "footprint": "Connector_JST:JST_PH_B2B-PH-K_1x02_P2.00mm_Vertical",
+    "nets": {
+      "1": "+3V3",
+      "2": "RING"
+    }
+  },
+  "R4": {
+    "uuid": "e250ee4b-2653-5347-90bb-25d3b6f5acf2",
+    "value": "47kR 1%",
+    "footprint": "Resistor_SMD:R_0805_2012Metric",
+    "nets": {
+      "1": "RING",
+      "2": "GND"
+    }
+  },
+  "C4": {
+    "uuid": "a5780a11-21db-546c-8f34-8185a2f8285f",
+    "value": "100nF",
+    "footprint": "Capacitor_SMD:C_0805_2012Metric",
+    "nets": {
+      "1": "RING",
+      "2": "GND"
+    }
+  },
+  "J8": {
+    "uuid": "a0397e8c-2526-51c1-ba57-3800b1208765",
+    "value": "LITTLE",
+    "footprint": "Connector_JST:JST_PH_B2B-PH-K_1x02_P2.00mm_Vertical",
+    "nets": {
+      "1": "+3V3",
+      "2": "LITTLE"
+    }
+  },
+  "R5": {
+    "uuid": "2b6325d6-d990-516b-b43c-c030831f386a",
+    "value": "47kR 1%",
+    "footprint": "Resistor_SMD:R_0805_2012Metric",
+    "nets": {
+      "1": "LITTLE",
+      "2": "GND"
+    }
+  },
+  "C5": {
+    "uuid": "a82d9b02-924e-5e6f-be8e-72e33289d125",
+    "value": "100nF",
+    "footprint": "Capacitor_SMD:C_0805_2012Metric",
+    "nets": {
+      "1": "LITTLE",
+      "2": "GND"
+    }
+  },
+  "J2": {
+    "uuid": "ecab3a19-df5d-5695-a850-7e235474096e",
+    "value": "PH-4 HARNESS",
+    "footprint": "Connector_JST:JST_PH_B4B-PH-K_1x04_P2.00mm_Vertical",
+    "nets": {
+      "1": "GND",
+      "2": "+3V3",
+      "3": "SDA",
+      "4": "SCL"
+    }
+  }
+}

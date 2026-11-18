@@ -1,0 +1,348 @@
+{
+  "solver": [
+    "** ngspice-47 : Circuit level simulation program",
+    "** Compiled with KLU Direct Linear Solver"
+  ],
+  "inputs": [
+    {
+      "side": "left",
+      "result": "PASS",
+      "schematic_sha256": "0ce7221b7cdd18f392eec2fc6d98dedd82b294faddc704b16fde6be67203612c",
+      "netlist_sha256": "2b1a5c8ee14508fb660352c2c0fcd3843d5dd4a2d9976d95885abdb30ca61e64",
+      "board_sha256": "4a68e080480e37377cc56fe296f9175a257f796532d68a7e25c59ecb45d16400"
+    },
+    {
+      "side": "right",
+      "result": "PASS",
+      "schematic_sha256": "9b1b193dff7e79ebd3244a50303898d69ba8eff550c6e37d5da681ec4d9fda73",
+      "netlist_sha256": "789e9e34b55de6d51139483b35d49293c573705490fc219d507f0cae67c501bf",
+      "board_sha256": "f1e182bdd268876462b11f1131ec313442958fef6c54e3900a5e25b456b7834b"
+    },
+    {
+      "side": "hub",
+      "result": "PASS",
+      "schematic_sha256": "f16444457a5e5163266a6690523ae4127bc1cef1a4bc7bc7af9898693fb21d05",
+      "netlist_sha256": "271480179bfff32ed16dea9a3847b956d3833fd560aa7cf69f0cf31bcfb707f6",
+      "board_sha256": "53ba00cd6a077b4f545efc8a8295735c4c2749465453c4de1aef8b3e84b8fbe1",
+      "simulation": "Same verified passive button topology and values as LEFT; the ENABLE SPICE deck also represents HUB CALIBRATE."
+    }
+  ],
+  "flex": [
+    {
+      "case": "nominal",
+      "supply_V": 3.3,
+      "shunt_ohm": 47000.0,
+      "cap_F": 1e-07,
+      "leak_A": 0.0,
+      "open_V_at_50ms": 2.5456247785889976e-05,
+      "normal_low_V": 1.055107578351,
+      "normal_high_V": 2.15416667,
+      "step_1percent_ms": 14.724013519825867,
+      "error_at_10ms_mV": 48.16118668067371,
+      "tau_ms": 3.1972789115646254
+    },
+    {
+      "case": "corner0",
+      "supply_V": 3.135,
+      "shunt_ohm": 46530.0,
+      "cap_F": 8e-08,
+      "leak_A": -5e-08,
+      "open_V_at_50ms": -0.002324892398057,
+      "normal_low_V": 0.9939188758351,
+      "normal_high_V": 2.03849277,
+      "step_1percent_ms": 11.698823108115791,
+      "error_at_10ms_mV": 20.38750179431159,
+      "tau_ms": 2.540367160308469
+    },
+    {
+      "case": "corner1",
+      "supply_V": 3.135,
+      "shunt_ohm": 46530.0,
+      "cap_F": 8e-08,
+      "leak_A": 5e-08,
+      "open_V_at_50ms": 0.002328105215241,
+      "normal_low_V": 0.9970943348351,
+      "normal_high_V": 2.04011901,
+      "step_1percent_ms": 11.698823108115791,
+      "error_at_10ms_mV": 20.35726263192594,
+      "tau_ms": 2.540367160308469
+    },
+    {
+      "case": "corner2",
+      "supply_V": 3.135,
+      "shunt_ohm": 46530.0,
+      "cap_F": 1.2e-07,
+      "leak_A": -5e-08,
+      "open_V_at_50ms": -0.0021977190465760003,
+      "normal_low_V": 0.9939561528398,
+      "normal_high_V": 2.03849277,
+      "step_1percent_ms": 17.548234662173687,
+      "error_at_10ms_mV": 75.72217763431155,
+      "tau_ms": 3.8105507404627037
+    },
+    {
+      "case": "corner3",
+      "supply_V": 3.135,
+      "shunt_ohm": 46530.0,
+      "cap_F": 1.2e-07,
+      "leak_A": 5e-08,
+      "open_V_at_50ms": 0.00245508995949,
+      "normal_low_V": 0.9971315558398001,
+      "normal_high_V": 2.04011901,
+      "step_1percent_ms": 17.548234662173687,
+      "error_at_10ms_mV": 75.60986815392612,
+      "tau_ms": 3.8105507404627037
+    },
+    {
+      "case": "corner4",
+      "supply_V": 3.135,
+      "shunt_ohm": 47470.0,
+      "cap_F": 8e-08,
+      "leak_A": -5e-08,
+      "open_V_at_50ms": -0.002371417917692,
+      "normal_low_V": 1.00753469,
+      "normal_high_V": 2.05269922,
+      "step_1percent_ms": 11.85908611806359,
+      "error_at_10ms_mV": 21.513576964926393,
+      "tau_ms": 2.5751678307452366
+    },
+    {
+      "case": "corner5",
+      "supply_V": 3.135,
+      "shunt_ohm": 47470.0,
+      "cap_F": 8e-08,
+      "leak_A": 5e-08,
+      "open_V_at_50ms": 0.002375578932308,
+      "normal_low_V": 1.01075365,
+      "normal_high_V": 2.05433679,
+      "step_1percent_ms": 11.85908611806359,
+      "error_at_10ms_mV": 21.481028613494992,
+      "tau_ms": 2.5751678307452366
+    },
+    {
+      "case": "corner6",
+      "supply_V": 3.135,
+      "shunt_ohm": 47470.0,
+      "cap_F": 1.2e-07,
+      "leak_A": -5e-08,
+      "open_V_at_50ms": -0.002217651765733,
+      "normal_low_V": 1.0075775018609998,
+      "normal_high_V": 2.05269922,
+      "step_1percent_ms": 17.788629177095384,
+      "error_at_10ms_mV": 78.50018327592645,
+      "tau_ms": 3.8627517461178544
+    },
+    {
+      "case": "corner7",
+      "supply_V": 3.135,
+      "shunt_ohm": 47470.0,
+      "cap_F": 1.2e-07,
+      "leak_A": 5e-08,
+      "open_V_at_50ms": 0.002529112431876,
+      "normal_low_V": 1.010796391861,
+      "normal_high_V": 2.05433679,
+      "step_1percent_ms": 17.788629177095384,
+      "error_at_10ms_mV": 78.38140460649478,
+      "tau_ms": 3.8627517461178544
+    },
+    {
+      "case": "corner8",
+      "supply_V": 3.465,
+      "shunt_ohm": 46530.0,
+      "cap_F": 8e-08,
+      "leak_A": -5e-08,
+      "open_V_at_50ms": -0.002324723304017,
+      "normal_low_V": 1.098709048351,
+      "normal_high_V": 2.25315654,
+      "step_1percent_ms": 11.698823108115791,
+      "error_at_10ms_mV": 22.531956324587377,
+      "tau_ms": 2.540367160308469
+    },
+    {
+      "case": "corner9",
+      "supply_V": 3.465,
+      "shunt_ohm": 46530.0,
+      "cap_F": 8e-08,
+      "leak_A": 5e-08,
+      "open_V_at_50ms": 0.002328274315983,
+      "normal_low_V": 1.1018845,
+      "normal_high_V": 2.25478278,
+      "step_1percent_ms": 11.698823108115791,
+      "error_at_10ms_mV": 22.50171716220151,
+      "tau_ms": 2.540367160308469
+    },
+    {
+      "case": "corner10",
+      "supply_V": 3.465,
+      "shunt_ohm": 46530.0,
+      "cap_F": 1.2e-07,
+      "leak_A": -5e-08,
+      "open_V_at_50ms": -0.0021841732104540003,
+      "normal_low_V": 1.098750241861,
+      "normal_high_V": 2.25315654,
+      "step_1percent_ms": 17.548234662173687,
+      "error_at_10ms_mV": 83.68701915958732,
+      "tau_ms": 3.8105507404627037
+    },
+    {
+      "case": "corner11",
+      "supply_V": 3.465,
+      "shunt_ohm": 46530.0,
+      "cap_F": 1.2e-07,
+      "leak_A": 5e-08,
+      "open_V_at_50ms": 0.0024686357956119997,
+      "normal_low_V": 1.10192564351,
+      "normal_high_V": 2.25478278,
+      "step_1percent_ms": 17.548234662173687,
+      "error_at_10ms_mV": 83.57471803020155,
+      "tau_ms": 3.8105507404627037
+    },
+    {
+      "case": "corner12",
+      "supply_V": 3.465,
+      "shunt_ohm": 47470.0,
+      "cap_F": 8e-08,
+      "leak_A": -5e-08,
+      "open_V_at_50ms": -0.0023711989167380003,
+      "normal_low_V": 1.11376039,
+      "normal_high_V": 2.26885901,
+      "step_1percent_ms": 11.85908611806359,
+      "error_at_10ms_mV": 23.776447773685483,
+      "tau_ms": 2.5751678307452366
+    },
+    {
+      "case": "corner13",
+      "supply_V": 3.465,
+      "shunt_ohm": 47470.0,
+      "cap_F": 8e-08,
+      "leak_A": 5e-08,
+      "open_V_at_50ms": 0.002375797934911,
+      "normal_low_V": 1.11697935,
+      "normal_high_V": 2.27049658,
+      "step_1percent_ms": 11.85908611806359,
+      "error_at_10ms_mV": 23.743899422253634,
+      "tau_ms": 2.5751678307452366
+    },
+    {
+      "case": "corner14",
+      "supply_V": 3.465,
+      "shunt_ohm": 47470.0,
+      "cap_F": 1.2e-07,
+      "leak_A": -5e-08,
+      "open_V_at_50ms": -0.00220125909331,
+      "normal_low_V": 1.113807708563,
+      "normal_high_V": 2.26885901,
+      "step_1percent_ms": 17.788629177095384,
+      "error_at_10ms_mV": 86.75710964268558,
+      "tau_ms": 3.8627517461178544
+    },
+    {
+      "case": "corner15",
+      "supply_V": 3.465,
+      "shunt_ohm": 47470.0,
+      "cap_F": 1.2e-07,
+      "leak_A": 5e-08,
+      "open_V_at_50ms": 0.002545505095948,
+      "normal_low_V": 1.117026600212,
+      "normal_high_V": 2.27049658,
+      "step_1percent_ms": 17.788629177095384,
+      "error_at_10ms_mV": 86.63833932425358,
+      "tau_ms": 3.8627517461178544
+    },
+    {
+      "case": "leak_stress_plus_1uA",
+      "supply_V": 3.3,
+      "shunt_ohm": 47000,
+      "cap_F": 1e-07,
+      "leak_A": 1e-06,
+      "open_V_at_50ms": 0.0470250936603,
+      "normal_low_V": 1.087080288351,
+      "normal_high_V": 2.17048611,
+      "step_1percent_ms": 14.724013519825867,
+      "error_at_10ms_mV": 47.47525045102741,
+      "tau_ms": 3.1972789115646254
+    },
+    {
+      "case": "leak_stress_minus_1uA",
+      "supply_V": 3.3,
+      "shunt_ohm": 47000,
+      "cap_F": 1e-07,
+      "leak_A": -1e-06,
+      "open_V_at_50ms": -0.046974181203539994,
+      "normal_low_V": 1.023134868351,
+      "normal_high_V": 2.13784722,
+      "step_1percent_ms": 14.724013519825867,
+      "error_at_10ms_mV": 48.847121261319735,
+      "tau_ms": 3.1972789115646254
+    }
+  ],
+  "i2c": [
+    {
+      "capacitance_pF": 20,
+      "rise_ns": 177.93247973347675,
+      "limit_ns": 1000,
+      "result": "PASS"
+    },
+    {
+      "capacitance_pF": 50,
+      "rise_ns": 444.8313294012698,
+      "limit_ns": 1000,
+      "result": "PASS"
+    },
+    {
+      "capacitance_pF": 100,
+      "rise_ns": 889.6627709720264,
+      "limit_ns": 1000,
+      "result": "PASS"
+    },
+    {
+      "capacitance_pF": 112,
+      "rise_ns": 996.422272920001,
+      "limit_ns": 1000,
+      "result": "PASS"
+    },
+    {
+      "capacitance_pF": 120,
+      "rise_ns": 1067.595295559217,
+      "limit_ns": 1000,
+      "result": "FAIL"
+    },
+    {
+      "capacitance_pF": 150,
+      "rise_ns": 1334.4941320505072,
+      "limit_ns": 1000,
+      "result": "FAIL"
+    },
+    {
+      "capacitance_pF": 200,
+      "rise_ns": 1779.3255281503198,
+      "limit_ns": 1000,
+      "result": "FAIL"
+    },
+    {
+      "capacitance_pF": 400,
+      "rise_ns": 3558.6510590745825,
+      "limit_ns": 1000,
+      "result": "FAIL"
+    }
+  ],
+  "enable": {
+    "pressed_V": 0.300272702,
+    "released_V": 3.29999997,
+    "worst_pressed_V": 0.3210626890294198
+  },
+  "faults": {
+    "hard_short_V": 3.29996524,
+    "unplug_50ms_V": 0.0005089024808987001,
+    "startup_50ms_error_mV": 0.002240182410018221
+  },
+  "adc_charge_stress_droop_mV": 0.7757708163265153,
+  "refinement_max_difference_uV": 0.07300599991211243,
+  "nominal_analytical_difference_uV": 0.08386611582977821,
+  "criteria": {
+    "flex_1percent_settling_ms": 20,
+    "unplug_50ms_mV": 5,
+    "i2c_rise_ns": 1000,
+    "adc_charge_assumption_droop_mV": 1
+  }
+}

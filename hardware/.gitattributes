@@ -1,0 +1,4 @@
+# Keep generated evidence in its original exporter/solver format.
+build/** linguist-generated -whitespace
+simulation/results/** linguist-generated -whitespace
+render/assets/* linguist-vendored

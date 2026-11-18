@@ -1,0 +1,470 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<export version="E">
+  <design>
+    <source>/Users/anoof/Documents/Codex/2026-11-17/https-github-com-samiurr10-gesture-controlled-2/work/gesture-controlled-drone/hardware/hub/hub.kicad_sch</source>
+    <date>2026-11-17T17:17:42</date>
+    <tool>Eeschema 10.0.3</tool>
+    <sheet number="1" name="/" tstamps="/">
+      <title_block>
+        <title>PalmPilot HUB carrier</title>
+        <company>USB-UART host / GPIO7 CALIBRATE</company>
+        <rev>A</rev>
+        <date>2026-11-17</date>
+        <source>hub.kicad_sch</source>
+        <comment number="1" value=""/>
+        <comment number="2" value=""/>
+        <comment number="3" value=""/>
+        <comment number="4" value=""/>
+        <comment number="5" value=""/>
+        <comment number="6" value=""/>
+        <comment number="7" value=""/>
+        <comment number="8" value=""/>
+        <comment number="9" value=""/>
+      </title_block>
+    </sheet>
+  </design>
+  <components>
+    <comp ref="C6">
+      <value>100nF</value>
+      <footprint>Capacitor_SMD:C_0805_2012Metric</footprint>
+      <fields>
+        <field name="Footprint">Capacitor_SMD:C_0805_2012Metric</field>
+        <field name="Datasheet"/>
+        <field name="Description"/>
+      </fields>
+      <libsource lib="Device" part="C" description="Unpolarized capacitor"/>
+      <property name="Sheetname" value=""/>
+      <property name="Sheetfile" value="hub.kicad_sch"/>
+      <property name="ki_keywords" value="cap capacitor"/>
+      <property name="ki_fp_filters" value="C_*"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamps>bd2b42fb-be1b-5408-be0e-a1efbd514312</tstamps>
+      <units>
+        <unit name="A">
+          <pins>
+            <pin num="1"/>
+            <pin num="2"/>
+          </pins>
+        </unit>
+      </units>
+    </comp>
+    <comp ref="J1">
+      <value>1x22 SOCKET</value>
+      <footprint>Connector_PinSocket_2.54mm:PinSocket_1x22_P2.54mm_Vertical</footprint>
+      <fields>
+        <field name="Footprint">Connector_PinSocket_2.54mm:PinSocket_1x22_P2.54mm_Vertical</field>
+        <field name="Datasheet"/>
+        <field name="Description"/>
+      </fields>
+      <libsource lib="PalmPilot" part="DevKit_J1" description=""/>
+      <property name="Sheetname" value=""/>
+      <property name="Sheetfile" value="hub.kicad_sch"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamps>46045f60-3fdd-5c6f-98f5-437bcc954c36</tstamps>
+      <units>
+        <unit name="A">
+          <pins>
+            <pin num="1"/>
+            <pin num="2"/>
+            <pin num="3"/>
+            <pin num="4"/>
+            <pin num="5"/>
+            <pin num="6"/>
+            <pin num="7"/>
+            <pin num="8"/>
+            <pin num="9"/>
+            <pin num="10"/>
+            <pin num="11"/>
+            <pin num="12"/>
+            <pin num="13"/>
+            <pin num="14"/>
+            <pin num="15"/>
+            <pin num="16"/>
+            <pin num="17"/>
+            <pin num="18"/>
+            <pin num="19"/>
+            <pin num="20"/>
+            <pin num="21"/>
+            <pin num="22"/>
+          </pins>
+        </unit>
+      </units>
+    </comp>
+    <comp ref="J3">
+      <value>1x22 SOCKET</value>
+      <footprint>Connector_PinSocket_2.54mm:PinSocket_1x22_P2.54mm_Vertical</footprint>
+      <fields>
+        <field name="Footprint">Connector_PinSocket_2.54mm:PinSocket_1x22_P2.54mm_Vertical</field>
+        <field name="Datasheet"/>
+        <field name="Description"/>
+      </fields>
+      <libsource lib="PalmPilot" part="DevKit_J3" description=""/>
+      <property name="Sheetname" value=""/>
+      <property name="Sheetfile" value="hub.kicad_sch"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamps>be7a2a9a-1b3d-5004-8269-047d4a18e730</tstamps>
+      <units>
+        <unit name="A">
+          <pins>
+            <pin num="1"/>
+            <pin num="2"/>
+            <pin num="3"/>
+            <pin num="4"/>
+            <pin num="5"/>
+            <pin num="6"/>
+            <pin num="7"/>
+            <pin num="8"/>
+            <pin num="9"/>
+            <pin num="10"/>
+            <pin num="11"/>
+            <pin num="12"/>
+            <pin num="13"/>
+            <pin num="14"/>
+            <pin num="15"/>
+            <pin num="16"/>
+            <pin num="17"/>
+            <pin num="18"/>
+            <pin num="19"/>
+            <pin num="20"/>
+            <pin num="21"/>
+            <pin num="22"/>
+          </pins>
+        </unit>
+      </units>
+    </comp>
+    <comp ref="R6">
+      <value>10kR</value>
+      <footprint>Resistor_SMD:R_0805_2012Metric</footprint>
+      <fields>
+        <field name="Footprint">Resistor_SMD:R_0805_2012Metric</field>
+        <field name="Datasheet"/>
+        <field name="Description"/>
+      </fields>
+      <libsource lib="Device" part="R_Small_US" description="Resistor, small US symbol"/>
+      <property name="Sheetname" value=""/>
+      <property name="Sheetfile" value="hub.kicad_sch"/>
+      <property name="ki_keywords" value="r resistor"/>
+      <property name="ki_fp_filters" value="R_*"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamps>e3e84201-a4ee-56a8-8973-b2e5d62700c6</tstamps>
+      <units>
+        <unit name="A">
+          <pins>
+            <pin num="1"/>
+            <pin num="2"/>
+          </pins>
+        </unit>
+      </units>
+    </comp>
+    <comp ref="R7">
+      <value>1kR</value>
+      <footprint>Resistor_SMD:R_0805_2012Metric</footprint>
+      <fields>
+        <field name="Footprint">Resistor_SMD:R_0805_2012Metric</field>
+        <field name="Datasheet"/>
+        <field name="Description"/>
+      </fields>
+      <libsource lib="Device" part="R_Small_US" description="Resistor, small US symbol"/>
+      <property name="Sheetname" value=""/>
+      <property name="Sheetfile" value="hub.kicad_sch"/>
+      <property name="ki_keywords" value="r resistor"/>
+      <property name="ki_fp_filters" value="R_*"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamps>ab7df0aa-bd25-5f42-bdbc-70e38e530cbb</tstamps>
+      <units>
+        <unit name="A">
+          <pins>
+            <pin num="1"/>
+            <pin num="2"/>
+          </pins>
+        </unit>
+      </units>
+    </comp>
+    <comp ref="SW1">
+      <value>CALIBRATE</value>
+      <footprint>Button_Switch_THT:SW_PUSH_6mm</footprint>
+      <fields>
+        <field name="Footprint">Button_Switch_THT:SW_PUSH_6mm</field>
+        <field name="Datasheet"/>
+        <field name="Description"/>
+      </fields>
+      <libsource lib="Switch" part="SW_Push" description="Push button switch, generic, two pins"/>
+      <property name="Sheetname" value=""/>
+      <property name="Sheetfile" value="hub.kicad_sch"/>
+      <property name="ki_keywords" value="switch normally-open pushbutton push-button"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamps>61174224-20b5-5918-9abe-576336dfb2af</tstamps>
+      <units>
+        <unit name="A">
+          <pins>
+            <pin num="1"/>
+            <pin num="2"/>
+          </pins>
+        </unit>
+      </units>
+    </comp>
+  </components>
+  <libparts>
+    <libpart lib="Device" part="C">
+      <description>Unpolarized capacitor</description>
+      <footprints>
+        <fp>C_*</fp>
+      </footprints>
+      <fields>
+        <field name="Reference">C</field>
+        <field name="Value">C</field>
+        <field name="Footprint"/>
+        <field name="Datasheet"/>
+        <field name="Description">Unpolarized capacitor</field>
+      </fields>
+      <pins>
+        <pin num="1" name="" type="passive"/>
+        <pin num="2" name="" type="passive"/>
+      </pins>
+    </libpart>
+    <libpart lib="Device" part="R_Small_US">
+      <description>Resistor, small US symbol</description>
+      <footprints>
+        <fp>R_*</fp>
+      </footprints>
+      <fields>
+        <field name="Reference">R</field>
+        <field name="Value">R_Small_US</field>
+        <field name="Footprint"/>
+        <field name="Datasheet"/>
+        <field name="Description">Resistor, small US symbol</field>
+      </fields>
+      <pins>
+        <pin num="1" name="" type="passive"/>
+        <pin num="2" name="" type="passive"/>
+      </pins>
+    </libpart>
+    <libpart lib="PalmPilot" part="DevKit_J1">
+      <fields>
+        <field name="Reference">J</field>
+        <field name="Value">DevKit_J1</field>
+        <field name="Footprint"/>
+        <field name="Datasheet"/>
+        <field name="Description"/>
+      </fields>
+      <pins>
+        <pin num="1" name="3V3" type="passive"/>
+        <pin num="2" name="3V3" type="passive"/>
+        <pin num="3" name="RST" type="passive"/>
+        <pin num="4" name="GPIO4" type="passive"/>
+        <pin num="5" name="GPIO5" type="passive"/>
+        <pin num="6" name="GPIO6" type="passive"/>
+        <pin num="7" name="GPIO7" type="passive"/>
+        <pin num="8" name="GPIO15" type="passive"/>
+        <pin num="9" name="GPIO16" type="passive"/>
+        <pin num="10" name="GPIO17" type="passive"/>
+        <pin num="11" name="GPIO18" type="passive"/>
+        <pin num="12" name="GPIO8" type="passive"/>
+        <pin num="13" name="GPIO3" type="passive"/>
+        <pin num="14" name="GPIO46" type="passive"/>
+        <pin num="15" name="GPIO9" type="passive"/>
+        <pin num="16" name="GPIO10" type="passive"/>
+        <pin num="17" name="GPIO11" type="passive"/>
+        <pin num="18" name="GPIO12" type="passive"/>
+        <pin num="19" name="GPIO13" type="passive"/>
+        <pin num="20" name="GPIO14" type="passive"/>
+        <pin num="21" name="5V" type="passive"/>
+        <pin num="22" name="GND" type="passive"/>
+      </pins>
+    </libpart>
+    <libpart lib="PalmPilot" part="DevKit_J3">
+      <fields>
+        <field name="Reference">J</field>
+        <field name="Value">DevKit_J3</field>
+        <field name="Footprint"/>
+        <field name="Datasheet"/>
+        <field name="Description"/>
+      </fields>
+      <pins>
+        <pin num="1" name="GND" type="passive"/>
+        <pin num="2" name="TX_GPIO43" type="passive"/>
+        <pin num="3" name="RX_GPIO44" type="passive"/>
+        <pin num="4" name="GPIO1" type="passive"/>
+        <pin num="5" name="GPIO2" type="passive"/>
+        <pin num="6" name="GPIO42" type="passive"/>
+        <pin num="7" name="GPIO41" type="passive"/>
+        <pin num="8" name="GPIO40" type="passive"/>
+        <pin num="9" name="GPIO39" type="passive"/>
+        <pin num="10" name="GPIO38" type="passive"/>
+        <pin num="11" name="GPIO37" type="passive"/>
+        <pin num="12" name="GPIO36" type="passive"/>
+        <pin num="13" name="GPIO35" type="passive"/>
+        <pin num="14" name="GPIO0" type="passive"/>
+        <pin num="15" name="GPIO45" type="passive"/>
+        <pin num="16" name="GPIO48" type="passive"/>
+        <pin num="17" name="GPIO47" type="passive"/>
+        <pin num="18" name="GPIO21" type="passive"/>
+        <pin num="19" name="USB_D+" type="passive"/>
+        <pin num="20" name="USB_D-" type="passive"/>
+        <pin num="21" name="GND" type="passive"/>
+        <pin num="22" name="GND" type="passive"/>
+      </pins>
+    </libpart>
+    <libpart lib="Switch" part="SW_Push">
+      <description>Push button switch, generic, two pins</description>
+      <fields>
+        <field name="Reference">SW</field>
+        <field name="Value">SW_Push</field>
+        <field name="Footprint"/>
+        <field name="Datasheet"/>
+        <field name="Description">Push button switch, generic, two pins</field>
+      </fields>
+      <pins>
+        <pin num="1" name="1" type="passive"/>
+        <pin num="2" name="2" type="passive"/>
+      </pins>
+    </libpart>
+  </libparts>
+  <libraries>
+    <library logical="Device">
+      <uri>${KICAD10_SYMBOL_DIR}/Device.kicad_sym</uri>
+    </library>
+    <library logical="PalmPilot">
+      <uri>${KIPRJMOD}/../libraries/PalmPilot.kicad_sym</uri>
+    </library>
+    <library logical="Switch">
+      <uri>${KICAD10_SYMBOL_DIR}/Switch.kicad_sym</uri>
+    </library>
+  </libraries>
+  <nets>
+    <net code="1" name="+3V3" class="Default">
+      <node ref="J1" pin="1" pinfunction="3V3_1" pintype="passive"/>
+      <node ref="J1" pin="2" pinfunction="3V3_2" pintype="passive"/>
+      <node ref="R6" pin="1" pintype="passive"/>
+    </net>
+    <net code="2" name="/CALIBRATE" class="Default">
+      <node ref="C6" pin="1" pintype="passive"/>
+      <node ref="J1" pin="7" pinfunction="GPIO7_7" pintype="passive"/>
+      <node ref="R6" pin="2" pintype="passive"/>
+      <node ref="R7" pin="1" pintype="passive"/>
+    </net>
+    <net code="3" name="/SW" class="Default">
+      <node ref="R7" pin="2" pintype="passive"/>
+      <node ref="SW1" pin="1" pinfunction="1_1" pintype="passive"/>
+    </net>
+    <net code="4" name="GND" class="Default">
+      <node ref="C6" pin="2" pintype="passive"/>
+      <node ref="J1" pin="22" pinfunction="GND_22" pintype="passive"/>
+      <node ref="J3" pin="1" pinfunction="GND_1" pintype="passive"/>
+      <node ref="J3" pin="21" pinfunction="GND_21" pintype="passive"/>
+      <node ref="J3" pin="22" pinfunction="GND_22" pintype="passive"/>
+      <node ref="SW1" pin="2" pinfunction="2_2" pintype="passive"/>
+    </net>
+    <net code="5" name="unconnected-(J1-5V-Pad21)" class="Default">
+      <node ref="J1" pin="21" pinfunction="5V_21" pintype="passive+no_connect"/>
+    </net>
+    <net code="6" name="unconnected-(J1-GPIO3-Pad13)" class="Default">
+      <node ref="J1" pin="13" pinfunction="GPIO3_13" pintype="passive+no_connect"/>
+    </net>
+    <net code="7" name="unconnected-(J1-GPIO4-Pad4)" class="Default">
+      <node ref="J1" pin="4" pinfunction="GPIO4_4" pintype="passive+no_connect"/>
+    </net>
+    <net code="8" name="unconnected-(J1-GPIO5-Pad5)" class="Default">
+      <node ref="J1" pin="5" pinfunction="GPIO5_5" pintype="passive+no_connect"/>
+    </net>
+    <net code="9" name="unconnected-(J1-GPIO6-Pad6)" class="Default">
+      <node ref="J1" pin="6" pinfunction="GPIO6_6" pintype="passive+no_connect"/>
+    </net>
+    <net code="10" name="unconnected-(J1-GPIO8-Pad12)" class="Default">
+      <node ref="J1" pin="12" pinfunction="GPIO8_12" pintype="passive+no_connect"/>
+    </net>
+    <net code="11" name="unconnected-(J1-GPIO9-Pad15)" class="Default">
+      <node ref="J1" pin="15" pinfunction="GPIO9_15" pintype="passive+no_connect"/>
+    </net>
+    <net code="12" name="unconnected-(J1-GPIO10-Pad16)" class="Default">
+      <node ref="J1" pin="16" pinfunction="GPIO10_16" pintype="passive+no_connect"/>
+    </net>
+    <net code="13" name="unconnected-(J1-GPIO11-Pad17)" class="Default">
+      <node ref="J1" pin="17" pinfunction="GPIO11_17" pintype="passive+no_connect"/>
+    </net>
+    <net code="14" name="unconnected-(J1-GPIO12-Pad18)" class="Default">
+      <node ref="J1" pin="18" pinfunction="GPIO12_18" pintype="passive+no_connect"/>
+    </net>
+    <net code="15" name="unconnected-(J1-GPIO13-Pad19)" class="Default">
+      <node ref="J1" pin="19" pinfunction="GPIO13_19" pintype="passive+no_connect"/>
+    </net>
+    <net code="16" name="unconnected-(J1-GPIO14-Pad20)" class="Default">
+      <node ref="J1" pin="20" pinfunction="GPIO14_20" pintype="passive+no_connect"/>
+    </net>
+    <net code="17" name="unconnected-(J1-GPIO15-Pad8)" class="Default">
+      <node ref="J1" pin="8" pinfunction="GPIO15_8" pintype="passive+no_connect"/>
+    </net>
+    <net code="18" name="unconnected-(J1-GPIO16-Pad9)" class="Default">
+      <node ref="J1" pin="9" pinfunction="GPIO16_9" pintype="passive+no_connect"/>
+    </net>
+    <net code="19" name="unconnected-(J1-GPIO17-Pad10)" class="Default">
+      <node ref="J1" pin="10" pinfunction="GPIO17_10" pintype="passive+no_connect"/>
+    </net>
+    <net code="20" name="unconnected-(J1-GPIO18-Pad11)" class="Default">
+      <node ref="J1" pin="11" pinfunction="GPIO18_11" pintype="passive+no_connect"/>
+    </net>
+    <net code="21" name="unconnected-(J1-GPIO46-Pad14)" class="Default">
+      <node ref="J1" pin="14" pinfunction="GPIO46_14" pintype="passive+no_connect"/>
+    </net>
+    <net code="22" name="unconnected-(J1-RST-Pad3)" class="Default">
+      <node ref="J1" pin="3" pinfunction="RST_3" pintype="passive+no_connect"/>
+    </net>
+    <net code="23" name="unconnected-(J3-GPIO0-Pad14)" class="Default">
+      <node ref="J3" pin="14" pinfunction="GPIO0_14" pintype="passive+no_connect"/>
+    </net>
+    <net code="24" name="unconnected-(J3-GPIO1-Pad4)" class="Default">
+      <node ref="J3" pin="4" pinfunction="GPIO1_4" pintype="passive+no_connect"/>
+    </net>
+    <net code="25" name="unconnected-(J3-GPIO2-Pad5)" class="Default">
+      <node ref="J3" pin="5" pinfunction="GPIO2_5" pintype="passive+no_connect"/>
+    </net>
+    <net code="26" name="unconnected-(J3-GPIO21-Pad18)" class="Default">
+      <node ref="J3" pin="18" pinfunction="GPIO21_18" pintype="passive+no_connect"/>
+    </net>
+    <net code="27" name="unconnected-(J3-GPIO35-Pad13)" class="Default">
+      <node ref="J3" pin="13" pinfunction="GPIO35_13" pintype="passive+no_connect"/>
+    </net>
+    <net code="28" name="unconnected-(J3-GPIO36-Pad12)" class="Default">
+      <node ref="J3" pin="12" pinfunction="GPIO36_12" pintype="passive+no_connect"/>
+    </net>
+    <net code="29" name="unconnected-(J3-GPIO37-Pad11)" class="Default">
+      <node ref="J3" pin="11" pinfunction="GPIO37_11" pintype="passive+no_connect"/>
+    </net>
+    <net code="30" name="unconnected-(J3-GPIO38-Pad10)" class="Default">
+      <node ref="J3" pin="10" pinfunction="GPIO38_10" pintype="passive+no_connect"/>
+    </net>
+    <net code="31" name="unconnected-(J3-GPIO39-Pad9)" class="Default">
+      <node ref="J3" pin="9" pinfunction="GPIO39_9" pintype="passive+no_connect"/>
+    </net>
+    <net code="32" name="unconnected-(J3-GPIO40-Pad8)" class="Default">
+      <node ref="J3" pin="8" pinfunction="GPIO40_8" pintype="passive+no_connect"/>
+    </net>
+    <net code="33" name="unconnected-(J3-GPIO41-Pad7)" class="Default">
+      <node ref="J3" pin="7" pinfunction="GPIO41_7" pintype="passive+no_connect"/>
+    </net>
+    <net code="34" name="unconnected-(J3-GPIO42-Pad6)" class="Default">
+      <node ref="J3" pin="6" pinfunction="GPIO42_6" pintype="passive+no_connect"/>
+    </net>
+    <net code="35" name="unconnected-(J3-GPIO45-Pad15)" class="Default">
+      <node ref="J3" pin="15" pinfunction="GPIO45_15" pintype="passive+no_connect"/>
+    </net>
+    <net code="36" name="unconnected-(J3-GPIO47-Pad17)" class="Default">
+      <node ref="J3" pin="17" pinfunction="GPIO47_17" pintype="passive+no_connect"/>
+    </net>
+    <net code="37" name="unconnected-(J3-GPIO48-Pad16)" class="Default">
+      <node ref="J3" pin="16" pinfunction="GPIO48_16" pintype="passive+no_connect"/>
+    </net>
+    <net code="38" name="unconnected-(J3-RX_GPIO44-Pad3)" class="Default">
+      <node ref="J3" pin="3" pinfunction="RX_GPIO44_3" pintype="passive+no_connect"/>
+    </net>
+    <net code="39" name="unconnected-(J3-TX_GPIO43-Pad2)" class="Default">
+      <node ref="J3" pin="2" pinfunction="TX_GPIO43_2" pintype="passive+no_connect"/>
+    </net>
+    <net code="40" name="unconnected-(J3-USB_D+-Pad19)" class="Default">
+      <node ref="J3" pin="19" pinfunction="USB_D+_19" pintype="passive+no_connect"/>
+    </net>
+    <net code="41" name="unconnected-(J3-USB_D--Pad20)" class="Default">
+      <node ref="J3" pin="20" pinfunction="USB_D-_20" pintype="passive+no_connect"/>
+    </net>
+  </nets>
+</export>

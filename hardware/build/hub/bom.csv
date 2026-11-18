@@ -1,0 +1,8 @@
+Reference,Value,Footprint,Quantity
+J1,1x22 SOCKET,Connector_PinSocket_2.54mm:PinSocket_1x22_P2.54mm_Vertical,1
+J3,1x22 SOCKET,Connector_PinSocket_2.54mm:PinSocket_1x22_P2.54mm_Vertical,1
+R6,10kR,Resistor_SMD:R_0805_2012Metric,1
+C6,100nF,Capacitor_SMD:C_0805_2012Metric,1
+R7,1kR,Resistor_SMD:R_0805_2012Metric,1
+SW1,CALIBRATE,Button_Switch_THT:SW_PUSH_6mm,1
+MODULE,ESP32-S3-DevKitC-1-N8R8,"Plug-in module, not reflowed",1
