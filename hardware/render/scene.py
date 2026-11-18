@@ -1,6 +1,6 @@
 """Blender 5: actual KiCad GLBs + licensed left/right hand meshes.
 Run from the repo: blender -b --python hardware/render/scene.py
-The DevKit, IMU, harness, straps, and sensor surfaces are illustrative proxies.
+The WROOM module and board parts come from KiCad. IMU, USB shell, harness, straps and sensors are illustrative.
 """
 import bpy, math, pathlib, json, hashlib
 from mathutils import Vector, Matrix
@@ -13,7 +13,7 @@ def mat(name,color,metal=0,rough=.45):
  m=bpy.data.materials.new(name);m.diffuse_color=(*color,1);m.use_nodes=True;s=m.node_tree.nodes.get('Principled BSDF');s.inputs['Base Color'].default_value=(*color,1);s.inputs['Metallic'].default_value=metal;s.inputs['Roughness'].default_value=rough;return m
 skin=mat('Hand / warm neutral skin',(.49,.285,.18),rough=.48);ss=skin.node_tree.nodes.get('Principled BSDF');ss.inputs['Subsurface Weight'].default_value=.12
 black=mat('Strap / woven charcoal',(.014,.021,.027),rough=.85);foam=mat('Mount / soft elastomer',(.035,.047,.052),rough=.85)
-teal=mat('PCB / teal solder mask',(.009,.14,.12),rough=.4);devmat=mat('DevKit PCB / graphite',(.012,.024,.025),rough=.55)
+teal=mat('PCB / teal solder mask',(.009,.14,.12),rough=.4);devmat=mat('Markings / graphite',(.012,.024,.025),rough=.55)
 gold=mat('Sensor / amber polyester',(.58,.32,.045),metal=.25,rough=.34);carbon=mat('Sensor / carbon resistive track',(.045,.038,.025),rough=.72)
 copper=mat('Contact / plated gold',(.72,.49,.17),metal=.8,rough=.25);metal=mat('Shield / brushed metal',(.56,.61,.64),metal=.85,rough=.3)
 white=mat('Markings / warm white',(.79,.85,.84),rough=.65);red=mat('ENABLE / vermilion',(.8,.075,.035),rough=.4)
@@ -46,7 +46,7 @@ def ribbon(name,points,width,m,thick=.00048):
   vs.extend([Vector(pt)+d,Vector(pt)-d])
  for i in range(len(points)-1):fs.append((2*i,2*i+1,2*i+3,2*i+2))
  me=bpy.data.meshes.new(name);me.from_pydata(vs,[],fs);me.update();o=bpy.data.objects.new(name,me);bpy.context.collection.objects.link(o);o.data.materials.append(m);so=o.modifiers.new('Film thickness','SOLIDIFY');so.thickness=thick;return o
-manifest={'scene_units':'meters','carrier_origin':'KiCad GLB origin (x, -PCB_y, z); translate (-0.033,0.088,0.025)','hand_asset_revision':'f4992299601614adbfefd398dc8e281556bb7444','components':'DevKit and IMU approximate envelopes; PCB geometry imported without scaling','hands':[]}
+manifest={'scene_units':'meters','carrier_origin':'KiCad GLB origin (x, -PCB_y, z); translate (-0.025,0.078,0.024)','hand_asset_revision':'f4992299601614adbfefd398dc8e281556bb7444','components':'Direct-soldered WROOM, PCB and supported component geometry imported without scaling. No DevKit, sockets or added module proxies. IMU and missing USB shell are illustrative.','hands':[]}
 for side,ox,angle in [('left',-.095,math.radians(-7)),('right',.095,math.radians(7))]:
  start=set(bpy.data.objects)
  with bpy.data.libraries.load(str(AS/(side+'-baked.blend')),link=False) as (src,dst):dst.objects=[n for n in src.objects if 'actual hand mesh' in n]
@@ -65,28 +65,19 @@ for side,ox,angle in [('left',-.095,math.radians(-7)),('right',.095,math.radians
  for f in o.data.polygons:f.use_smooth=True
  strap(side+' / wrist webbing',-.018,.031,.018,width=.014)
  strap(side+' / palm webbing',.048,.042,.020,width=.013)
- # Four localized cushions retain ventilation and avoid inventing a fitted enclosure.
- for x in [-.026,.026]:
-  for y in [.021,.074]:cube(side+' / illustrative cushion',(x,y,.0205),(.012,.015,.006),foam,.002)
+ # Cushions and screws follow the four native PCB mounting holes.
+ mounts=[(-.022,.075),(.014,.065),(-.008,.025),(.0233,.027)]
+ for x,y in mounts:cube(side+' / illustrative cushion',(x,y,.0204),(.007,.008,.004),foam,.001)
  pre=set(bpy.data.objects);bpy.ops.import_scene.gltf(filepath=str(R/'build'/side/'carrier.glb'));pcbobjects=set(bpy.data.objects)-pre
  for o in pcbobjects:
-  if o.parent is None:o.location+=Vector((-.033,.088,.025))
+  if o.parent is None:o.location+=Vector((-.025,.078,.024))
   o.name=side+' / KiCad / '+o.name
   if o.type=='MESH' and 'soldermask' in o.name.lower():o.data.materials.clear();o.data.materials.append(teal)
- # Approximate genuine DevKitC-1 dimensions, following Espressif mechanical drawing.
- cube(side+' / DevKit PCB proxy',(0,.04390,.0362),(.0254,.06274,.0016),devmat,.0005)
- cube(side+' / WROOM substrate proxy',(0,.0688,.0375),(.018,.0255,.001),devmat,.0003)
- cube(side+' / WROOM shield proxy',(0,.065,.0396),(.0178,.0175,.0032),metal,.0007)
- text('ESP32-S3',(0,.0655,.04125),.0021,devmat)
- # Visible meander proxy above the carrier's antenna notch.
- for dx in [-.006,-.003,0,.003,.006]:curve(side+' / antenna illustration',[(dx,.077,.03805),(dx,.080,.03805)],.00022,copper)
- curve(side+' / antenna bus illustration',[(-.006,.077,.03805),(.006,.077,.03805)],.00022,copper)
- for x in [-.01143,.01143]:
-  for i in range(22):cube(side+' / DevKit header',(x,.074-i*.00254,.0353),(.0025,.0022,.0015),black,.0001)
- for x in [-.0052,.0052]:
-  cube(side+' / Micro USB shell',(x,.0145,.0388),(.0075,.0055,.0028),metal,.0004);cube(side+' / USB opening',(x,.01172,.0387),(.0058,.0003,.0015),black,.0001)
- cube(side+' / USB UART chip',(0,.034,.038),(.0048,.0048,.001),black,.0002)
- for x in [-.005,.005]:cube(side+' / boot reset proxy',(x,.025,.0384),(.0032,.004,.0017),black,.0003)
+ # The module/shield/antenna are the native KiCad STEP geometry, soldered to this PCB.
+ text('ESP32-S3',(0,.068,.02715),.0018,devmat)
+ # Exact USB shell model is absent from the installed KiCad library; envelope proxy only.
+ cube(side+' / USB connector shell envelope',(0,.0215,.0254),(.0078,.0052,.0027),metal,.00035)
+ cube(side+' / USB connector opening',(0,.0188,.0254),(.0062,.0004,.0016),black,.00015)
  # Motion breakout is rigidly mounted to the separate wrist strap.
  cube(side+' / IMU support',(0,-.018,.020),(.030,.023,.003),foam,.002)
  cube(side+' / Adafruit 5543 envelope proxy',(0,-.018,.023),(.0254,.01778,.0016),teal,.0006)
@@ -95,9 +86,9 @@ for side,ox,angle in [('left',-.095,math.radians(-7)),('right',.095,math.radians
  for x in [-.010,.010]:
   for y in [-.024,-.012]:cylinder(side+' / IMU screw',(x,y,.025),.0017,.0017,metal)
  for j in range(4):
-  dx=(j-1.5)*.0012;curve(side+' / IMU four-wire harness',[(.024+dx,.034,.035),(.039+dx,.016,.029),(.038+dx,-.013,.026),(.011,-.021+dx,.026)],.00055,wirem[j])
+  dx=(j-1.5)*.0012;curve(side+' / IMU four-wire harness',[(.020+dx,.071,.032),(.033+dx,.050,.031),(.036+dx,-.013,.026),(.011,-.021+dx,.026)],.00055,wirem[j])
  # Five sensors on real finger surfaces, with a dorsal ray cast to place the films.
- fingers=['thumb','index-finger','middle-finger','ring-finger','pinky-finger'];connector={'thumb':(.024,.066),'index-finger':(.024,.053),'middle-finger':(-.026,.066),'ring-finger':(-.026,.053),'pinky-finger':(-.026,.040)}
+ fingers=['thumb','index-finger','middle-finger','ring-finger','pinky-finger'];connector={'thumb':(.019,.056),'index-finger':(.019,.046),'middle-finger':(-.021,.059),'ring-finger':(-.021,.049),'pinky-finger':(-.021,.039)}
  sensor_lengths={}
  for fi,finger in enumerate(fingers):
   names=[finger+'-'+n for n in (['metacarpal','phalanx-proximal','phalanx-distal','tip'] if finger=='thumb' else ['metacarpal','phalanx-proximal','phalanx-intermediate','phalanx-distal','tip'])]
@@ -123,16 +114,16 @@ for side,ox,angle in [('left',-.095,math.radians(-7)),('right',.095,math.radians
   bx,by=connector[finger];sgn=1 if bx>0 else -1
   for j in range(2):
    pp=points[0]+Vector(((j-.5)*.002,0,.0005));cylinder(side+' / '+finger+' / contact',pp,.0008,.0003,copper)
-   curve(side+' / '+finger+' / sensor lead',[(bx+(j-.5)*.0015,by,.036),(sgn*.040,by+.008,.038),(sgn*.043,max(by+.02,pp.y-.015),.027),pp],.00055,wirem[j])
+   curve(side+' / '+finger+' / sensor lead',[(bx+(j-.5)*.0015,by,.032),(sgn*.036,by+.008,.034),(sgn*.043,max(by+.02,pp.y-.015),.027),pp],.00055,wirem[j])
  # External ENABLE thumb control; no right-hand button fitted.
  if side=='left':
   cube('LEFT / ENABLE switch mount',(.041,.072,.022),(.013,.016,.007),foam,.002)
   cylinder('LEFT / ENABLE switch',(.041,.072,.028),.0045,.003,red)
-  for j in range(2):curve('LEFT / ENABLE external leads',[(-.026+j*.002,.025,.035),(-.039,.008,.029),(.038,.004,.025),(.041+j*.002,.063,.026)],.00055,wirem[2-j])
+  for j in range(2):curve('LEFT / ENABLE external leads',[(-.013+j*.002,.0345,.032),(-.039,.008,.029),(.038,.004,.025),(.041+j*.002,.063,.026)],.00055,wirem[2-j])
  # USB supply remains explicit, with cable exiting toward the wrist.
- cube(side+' / USB power plug',(-.0052,.007,.039),(.008,.010,.004),black,.001)
- curve(side+' / USB power cable',[(-.0052,.003,.039),(-.017,-.022,.032),(-.032,-.055,.015),(-.032,-.077,.008)],.00165,black)
- for x,y in [(-.027,.081),(.027,.081),(-.027,.015),(.027,.015)]:cylinder(side+' / carrier mounting screw',(x,y,.027),.0023,.002,metal)
+ cube(side+' / USB power plug',(0,.0145,.0255),(.008,.010,.004),black,.001)
+ curve(side+' / USB power cable',[(0,.010,.0255),(-.017,-.022,.026),(-.032,-.055,.015),(-.032,-.077,.008)],.00165,black)
+ for x,y in mounts:cylinder(side+' / module PCB mounting screw',(x,y,.025),.0021,.0016,metal)
  # Apply one rigid product transform, preserving native PCB component placement.
  allside=(set(bpy.data.objects)-start)|{obj};root=bpy.data.objects.new(side.upper()+' ASSEMBLY',None);bpy.context.collection.objects.link(root)
  for o in allside:
@@ -142,16 +133,14 @@ for side,ox,angle in [('left',-.095,math.radians(-7)),('right',.095,math.radians
 # The third board belongs to the hub firmware: no flex or motion sensor on it.
 pre=set(bpy.data.objects);bpy.ops.import_scene.gltf(filepath=str(R/'build'/'hub'/'carrier.glb'))
 for o in set(bpy.data.objects)-pre:
- if o.parent is None:o.location+=Vector((-.027,.044,.019))
+ if o.parent is None:o.location+=Vector((-.025,.035,.019))
  o.name='HUB / KiCad / '+o.name
  if o.type=='MESH' and 'soldermask' in o.name.lower():o.data.materials.clear();o.data.materials.append(teal)
-for o in list(bpy.data.objects):
- if o.name.startswith('left / ') and any(k in o.name for k in ['DevKit','WROOM','antenna illustration','antenna bus illustration','Micro USB','USB opening','USB UART','boot reset']):
-  z=o.copy();z.data=o.data.copy();z.parent=None;z.name=o.name.replace('left /','HUB /');z.location+=Vector((-.007,-.044,-.006));bpy.context.collection.objects.link(z)
-cube('HUB / USB data plug',(-.0122,-.037,.033),(.008,.010,.004),black,.001)
-curve('HUB / USB data cable to laptop',[(-.0122,-.041,.033),(-.008,-.064,.025),(.007,-.084,.002),(.007,-.116,-.018)],.00165,black)
+cube('HUB / missing USB shell envelope',(0,-.0215,.0204),(.0078,.0052,.0027),metal,.00035)
+cube('HUB / USB data plug',(0,-.028,.0205),(.008,.010,.004),black,.001)
+curve('HUB / USB data cable to laptop',[(0,-.033,.0205),(-.008,-.064,.018),(.007,-.084,.002),(.007,-.116,-.018)],.00165,black)
 text('HUB / USB TO HOST',(0,-.051,.001),.0032,white)
-manifest['hub']={'board_sha256':hashlib.sha256((R/'hub'/'hub.kicad_pcb').read_bytes()).hexdigest(),'transform_m':[-.027,.044,.019]}
+manifest['hub']={'board_sha256':hashlib.sha256((R/'hub'/'hub.kicad_pcb').read_bytes()).hexdigest(),'transform_m':[-.025,.035,.019]}
 
 # Clean product studio. Hand meshes and assemblies remain individually editable.
 floor=mat('Studio / porcelain',(.72,.75,.73),rough=.8);cube('Studio surface',(0,.07,-.085),(.8,.8,.005),floor,.002)
@@ -160,7 +149,7 @@ text('PALMPILOT',(0,.245,-.022),.018,ink)
 text('T W O   H A N D S   /   O N E   F L I G H T',(0,.228,-.022),.0044,ink)
 text('L  /  THROTTLE + YAW',(-.108,-.092,-.022),.0042,ink)
 text('R  /  PITCH + ROLL',(.108,-.092,-.022),.0042,ink)
-text('REV A     /     USB-POWERED CARRIERS     /     WEARABLE FIT CONCEPT',(0,-.106,-.022),.0028,ink)
+text('REV B     /     DIRECT WROOM MODULES     /     WEARABLE FIT CONCEPT',(0,-.106,-.022),.0028,ink)
 def area(name,loc,power,size,color):
  d=bpy.data.lights.new(name,'AREA');o=bpy.data.objects.new(name,d);bpy.context.collection.objects.link(o);o.location=loc;d.energy=power;d.shape='DISK';d.size=size;d.color=color;o.rotation_euler=(Vector((0,.08,0))-o.location).to_track_quat('-Z','Y').to_euler()
 area('Key softbox',(-.22,-.05,.45),22,.35,(1,.87,.74));area('Fill softbox',(.27,.16,.3),17,.25,(.72,.87,1));area('Rim softbox',(-.1,.35,.32),25,.22,(1,1,1))
@@ -172,3 +161,6 @@ bpy.ops.wm.save_as_mainfile(filepath=str(OUT/'palmpilot-two-hands.blend'))
 sc.render.filepath=str(OUT/'two-hands.png');bpy.ops.render.render(write_still=True)
 # Detail camera keeps the other assembly in the saved project but frames the left hand.
 cam.location=(-.24,-.08,.32);cam.rotation_euler=(Vector((-.10,.075,.02))-cam.location).to_track_quat('-Z','Y').to_euler();cam.data.ortho_scale=.255;sc.render.resolution_x=1800;sc.render.resolution_y=1600;sc.render.filepath=str(OUT/'left-hand-detail.png');bpy.ops.render.render(write_still=True)
+
+# Tighter PCB-on-hand view shows the module, its antenna overhang and the soldered support circuit.
+cam.location=(-.12,-.03,.28);cam.rotation_euler=(Vector((-.10,.056,.025))-cam.location).to_track_quat('-Z','Y').to_euler();cam.data.ortho_scale=.13;sc.render.resolution_x=1700;sc.render.resolution_y=1500;sc.render.filepath=str(OUT/'module-on-hand.png');bpy.ops.render.render(write_still=True)

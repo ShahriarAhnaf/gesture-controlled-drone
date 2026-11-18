@@ -14,3 +14,5 @@ simulation/results/mpl-cache/
 
 # Solver logs are part of the retained numerical evidence.
 !/simulation/results/*.log
+
+!/build/revb-review.json

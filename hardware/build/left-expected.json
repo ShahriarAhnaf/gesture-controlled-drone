@@ -1,205 +1,431 @@
 {
-  "J1": {
-    "uuid": "cf19ca10-fd33-5d37-9593-510037050c44",
-    "value": "1x22 SOCKET",
-    "footprint": "Connector_PinSocket_2.54mm:PinSocket_1x22_P2.54mm_Vertical",
+  "U1": {
+    "uuid": "f402ce01-d95b-5e5c-92bf-d11d98ad7987",
+    "lib": "RF_Module:ESP32-S3-WROOM-1",
+    "value": "ESP32-S3-WROOM-1-N16R8",
+    "footprint": "PalmPilotModules:ESP32-S3-WROOM-1",
     "nets": {
-      "1": "+3V3",
+      "1": "GND",
       "2": "+3V3",
+      "3": "EN",
+      "27": "BOOT",
+      "36": "UART_RX",
+      "37": "UART_TX",
+      "40": "GND",
+      "41": "GND",
       "4": "MIDDLE",
       "5": "RING",
       "6": "LITTLE",
-      "7": "ENABLE",
       "12": "SDA",
-      "15": "SCL",
-      "22": "GND"
+      "17": "SCL",
+      "38": "INDEX",
+      "39": "THUMB",
+      "7": "ENABLE"
+    },
+    "at": [
+      64.77,
+      77.47
+    ],
+    "fields": {
+      "Reference": "U1",
+      "Value": "ESP32-S3-WROOM-1-N16R8",
+      "Footprint": "PalmPilotModules:ESP32-S3-WROOM-1",
+      "MPN": "ESP32-S3-WROOM-1-N16R8",
+      "Manufacturer": "Espressif Systems",
+      "LCSC": "C2913202",
+      "Datasheet": "https://www.espressif.com/sites/default/files/documentation/esp32-s3-wroom-1_wroom-1u_datasheet_en.pdf"
     }
   },
-  "J3": {
-    "uuid": "b0234bcb-469b-5b5d-9325-397414c2e632",
-    "value": "1x22 SOCKET",
-    "footprint": "Connector_PinSocket_2.54mm:PinSocket_1x22_P2.54mm_Vertical",
+  "C10": {
+    "uuid": "965abdb7-adaf-5d79-8d3d-ffba98893fb1",
+    "lib": "Device:C",
+    "value": "22uF 25V X5R",
+    "footprint": "Capacitor_SMD:C_1206_3216Metric",
+    "nets": {
+      "1": "+3V3",
+      "2": "GND"
+    },
+    "at": [
+      20.32,
+      44.45
+    ],
+    "fields": {
+      "Reference": "C10",
+      "Value": "22uF 25V X5R",
+      "Footprint": "Capacitor_SMD:C_1206_3216Metric",
+      "MPN": "CL31A226KAHNNNE",
+      "Manufacturer": "Samsung Electro-Mechanics",
+      "LCSC": "C12891"
+    }
+  },
+  "C11": {
+    "uuid": "9adeee27-3829-5774-b140-8eea8bb0c2ca",
+    "lib": "Device:C",
+    "value": "100nF",
+    "footprint": "Capacitor_SMD:C_0805_2012Metric",
+    "nets": {
+      "1": "+3V3",
+      "2": "GND"
+    },
+    "at": [
+      36.83,
+      44.45
+    ],
+    "fields": {
+      "Reference": "C11",
+      "Value": "100nF",
+      "Footprint": "Capacitor_SMD:C_0805_2012Metric",
+      "MPN": "CC0805KRX7R9BB104",
+      "Manufacturer": "Yageo",
+      "LCSC": "C49678"
+    }
+  },
+  "U2": {
+    "uuid": "6e2eb8ed-f54b-56c1-aa68-d078fad4009e",
+    "lib": "PalmPilot:CH340C_3V3",
+    "value": "CH340C / 3V3 MODE",
+    "footprint": "Package_SO:SOIC-16_3.9x9.9mm_P1.27mm",
     "nets": {
       "1": "GND",
-      "4": "THUMB",
-      "5": "INDEX",
-      "21": "GND",
-      "22": "GND"
+      "2": "UART_RX",
+      "3": "UART_TX",
+      "4": "+3V3",
+      "5": "USB_P",
+      "6": "USB_M",
+      "16": "+3V3"
+    },
+    "at": [
+      175.26,
+      72.39
+    ],
+    "fields": {
+      "Reference": "U2",
+      "Value": "CH340C / 3V3 MODE",
+      "Footprint": "Package_SO:SOIC-16_3.9x9.9mm_P1.27mm",
+      "MPN": "CH340C",
+      "Manufacturer": "WCH",
+      "LCSC": "C84681",
+      "Datasheet": "https://www.wch-ic.com/downloads/CH340DS1_PDF.html"
     }
   },
-  "J4": {
-    "uuid": "aa452045-acd4-56ec-a0dc-c2ec4b93cbfd",
-    "value": "THUMB",
-    "footprint": "Connector_JST:JST_PH_B2B-PH-K_1x02_P2.00mm_Vertical",
-    "nets": {
-      "1": "+3V3",
-      "2": "THUMB"
-    }
-  },
-  "R1": {
-    "uuid": "f384b251-49a0-5998-b5e4-3fca260cf672",
-    "value": "47kR 1%",
-    "footprint": "Resistor_SMD:R_0805_2012Metric",
-    "nets": {
-      "1": "THUMB",
-      "2": "GND"
-    }
-  },
-  "C1": {
-    "uuid": "18d9e2da-6d22-5876-8f2c-89c49d69a935",
+  "C22": {
+    "uuid": "188da0d1-ab3d-5893-a1cc-bde0683df95c",
+    "lib": "Device:C",
     "value": "100nF",
     "footprint": "Capacitor_SMD:C_0805_2012Metric",
     "nets": {
-      "1": "THUMB",
-      "2": "GND"
-    }
-  },
-  "J5": {
-    "uuid": "3f728c45-3c25-5b76-8804-678efe048127",
-    "value": "INDEX",
-    "footprint": "Connector_JST:JST_PH_B2B-PH-K_1x02_P2.00mm_Vertical",
-    "nets": {
       "1": "+3V3",
-      "2": "INDEX"
-    }
-  },
-  "R2": {
-    "uuid": "f89e5716-e456-5c0c-a0dc-3ea9d8bf9049",
-    "value": "47kR 1%",
-    "footprint": "Resistor_SMD:R_0805_2012Metric",
-    "nets": {
-      "1": "INDEX",
       "2": "GND"
+    },
+    "at": [
+      144.78,
+      111.76
+    ],
+    "fields": {
+      "Reference": "C22",
+      "Value": "100nF",
+      "Footprint": "Capacitor_SMD:C_0805_2012Metric",
+      "MPN": "CC0805KRX7R9BB104",
+      "Manufacturer": "Yageo",
+      "LCSC": "C49678"
     }
   },
-  "C2": {
-    "uuid": "cc8feb60-652e-532b-b8db-3a61c5ed3be9",
+  "C23": {
+    "uuid": "5d49728c-ec2a-50ff-bca0-a7f744d4ed45",
+    "lib": "Device:C",
     "value": "100nF",
     "footprint": "Capacitor_SMD:C_0805_2012Metric",
     "nets": {
-      "1": "INDEX",
+      "1": "+3V3",
       "2": "GND"
+    },
+    "at": [
+      195.58,
+      111.76
+    ],
+    "fields": {
+      "Reference": "C23",
+      "Value": "100nF",
+      "Footprint": "Capacitor_SMD:C_0805_2012Metric",
+      "MPN": "CC0805KRX7R9BB104",
+      "Manufacturer": "Yageo",
+      "LCSC": "C49678"
     }
   },
-  "J6": {
-    "uuid": "cceed237-10ac-5f71-a99d-7cc705a09a05",
-    "value": "MIDDLE",
-    "footprint": "Connector_JST:JST_PH_B2B-PH-K_1x02_P2.00mm_Vertical",
+  "J1": {
+    "uuid": "de0166ea-0bda-54c4-85bc-1f1447d40602",
+    "lib": "Connector:USB_B_Micro",
+    "value": "USB MICRO-B",
+    "footprint": "Connector_USB:USB_Micro-B_Molex-105017-0001",
+    "nets": {
+      "1": "+5V",
+      "2": "USB_M",
+      "3": "USB_P",
+      "5": "GND",
+      "SH": "GND"
+    },
+    "at": [
+      266.7,
+      54.61
+    ],
+    "fields": {
+      "Reference": "J1",
+      "Value": "USB MICRO-B",
+      "Footprint": "Connector_USB:USB_Micro-B_Molex-105017-0001",
+      "MPN": "1050170001",
+      "Manufacturer": "Molex",
+      "LCSC": "C136000",
+      "Datasheet": "https://www.molex.com/en-us/products/part-detail/1050170001"
+    }
+  },
+  "U3": {
+    "uuid": "252764fa-1677-5619-9c26-108235e0d08d",
+    "lib": "PalmPilot:TLV1117LV33",
+    "value": "TLV1117LV33DCYR",
+    "footprint": "Package_TO_SOT_SMD:SOT-223-3_TabPin2",
+    "nets": {
+      "1": "GND",
+      "2": "+3V3",
+      "3": "+5V"
+    },
+    "at": [
+      350.52,
+      59.69
+    ],
+    "fields": {
+      "Reference": "U3",
+      "Value": "TLV1117LV33DCYR",
+      "Footprint": "Package_TO_SOT_SMD:SOT-223-3_TabPin2",
+      "MPN": "TLV1117LV33DCYR",
+      "Manufacturer": "Texas Instruments",
+      "LCSC": "C15578",
+      "Datasheet": "https://www.ti.com/lit/ds/symlink/tlv1117lv.pdf"
+    }
+  },
+  "C12": {
+    "uuid": "2a0302f1-4269-5995-89e4-a83e8de4ec20",
+    "lib": "Device:C",
+    "value": "22uF 25V X5R",
+    "footprint": "Capacitor_SMD:C_1206_3216Metric",
+    "nets": {
+      "1": "+5V",
+      "2": "GND"
+    },
+    "at": [
+      327.66,
+      74.93
+    ],
+    "fields": {
+      "Reference": "C12",
+      "Value": "22uF 25V X5R",
+      "Footprint": "Capacitor_SMD:C_1206_3216Metric",
+      "MPN": "CL31A226KAHNNNE",
+      "Manufacturer": "Samsung Electro-Mechanics",
+      "LCSC": "C12891"
+    }
+  },
+  "C13": {
+    "uuid": "67d0122f-f9e1-5622-9b70-8ccf75b0fd0c",
+    "lib": "Device:C",
+    "value": "22uF 25V X5R",
+    "footprint": "Capacitor_SMD:C_1206_3216Metric",
     "nets": {
       "1": "+3V3",
-      "2": "MIDDLE"
+      "2": "GND"
+    },
+    "at": [
+      382.27,
+      74.93
+    ],
+    "fields": {
+      "Reference": "C13",
+      "Value": "22uF 25V X5R",
+      "Footprint": "Capacitor_SMD:C_1206_3216Metric",
+      "MPN": "CL31A226KAHNNNE",
+      "Manufacturer": "Samsung Electro-Mechanics",
+      "LCSC": "C12891"
     }
   },
-  "R3": {
-    "uuid": "12d52c0d-1246-51ee-aa6f-40c8df414dd4",
-    "value": "47kR 1%",
+  "R20": {
+    "uuid": "ecf1f850-7b3d-5511-9610-e3a7e6949524",
+    "lib": "Device:R_Small_US",
+    "value": "10kR",
     "footprint": "Resistor_SMD:R_0805_2012Metric",
-    "nets": {
-      "1": "MIDDLE",
-      "2": "GND"
-    }
-  },
-  "C3": {
-    "uuid": "edb19e5a-b06b-5a35-b8b9-9de029277369",
-    "value": "100nF",
-    "footprint": "Capacitor_SMD:C_0805_2012Metric",
-    "nets": {
-      "1": "MIDDLE",
-      "2": "GND"
-    }
-  },
-  "J7": {
-    "uuid": "489bc420-9b38-511a-b9b3-469deb520231",
-    "value": "RING",
-    "footprint": "Connector_JST:JST_PH_B2B-PH-K_1x02_P2.00mm_Vertical",
     "nets": {
       "1": "+3V3",
-      "2": "RING"
+      "2": "EN"
+    },
+    "at": [
+      25.4,
+      144.78
+    ],
+    "fields": {
+      "Reference": "R20",
+      "Value": "10kR",
+      "Footprint": "Resistor_SMD:R_0805_2012Metric"
     }
   },
-  "R4": {
-    "uuid": "4d7a352d-0d3d-509b-a559-7ba7797b8ec0",
-    "value": "47kR 1%",
-    "footprint": "Resistor_SMD:R_0805_2012Metric",
-    "nets": {
-      "1": "RING",
-      "2": "GND"
-    }
-  },
-  "C4": {
-    "uuid": "80c9dbe3-afb3-5898-b7be-998910b7bb46",
-    "value": "100nF",
+  "C20": {
+    "uuid": "25018b46-2945-5a24-9d0c-be5dfee931a9",
+    "lib": "Device:C",
+    "value": "1uF",
     "footprint": "Capacitor_SMD:C_0805_2012Metric",
     "nets": {
-      "1": "RING",
+      "1": "EN",
       "2": "GND"
+    },
+    "at": [
+      49.53,
+      163.83
+    ],
+    "fields": {
+      "Reference": "C20",
+      "Value": "1uF",
+      "Footprint": "Capacitor_SMD:C_0805_2012Metric",
+      "MPN": "CL21B105KBFNNNE",
+      "Manufacturer": "Samsung Electro-Mechanics",
+      "LCSC": "C28323"
     }
   },
-  "J8": {
-    "uuid": "3381930d-e530-57fe-a930-51f079c9c816",
-    "value": "LITTLE",
-    "footprint": "Connector_JST:JST_PH_B2B-PH-K_1x02_P2.00mm_Vertical",
+  "SW1": {
+    "uuid": "1e9066df-fe95-5237-8ff8-4ef3fe5ac1a9",
+    "lib": "Switch:SW_Push",
+    "value": "RESET",
+    "footprint": "Button_Switch_THT:SW_PUSH_6mm",
+    "nets": {
+      "1": "EN",
+      "2": "GND"
+    },
+    "at": [
+      80.01,
+      180.34
+    ],
+    "fields": {
+      "Reference": "SW1",
+      "Value": "RESET",
+      "Footprint": "Button_Switch_THT:SW_PUSH_6mm"
+    }
+  },
+  "R21": {
+    "uuid": "8ef6191d-84fb-5ee4-96fc-3955fd8fd3ae",
+    "lib": "Device:R_Small_US",
+    "value": "10kR",
+    "footprint": "Resistor_SMD:R_0805_2012Metric",
     "nets": {
       "1": "+3V3",
-      "2": "LITTLE"
+      "2": "BOOT"
+    },
+    "at": [
+      143.51,
+      149.86
+    ],
+    "fields": {
+      "Reference": "R21",
+      "Value": "10kR",
+      "Footprint": "Resistor_SMD:R_0805_2012Metric"
     }
   },
-  "R5": {
-    "uuid": "2cb4dff5-cde0-5dfc-96cc-496180c2931d",
-    "value": "47kR 1%",
-    "footprint": "Resistor_SMD:R_0805_2012Metric",
+  "SW2": {
+    "uuid": "44bddb7f-b6e6-552c-85bc-08a1209b4347",
+    "lib": "Switch:SW_Push",
+    "value": "BOOT",
+    "footprint": "Button_Switch_THT:SW_PUSH_6mm",
     "nets": {
-      "1": "LITTLE",
+      "1": "BOOT",
       "2": "GND"
-    }
-  },
-  "C5": {
-    "uuid": "fefcab17-0e6f-5a64-b25f-44d6d6ca68b9",
-    "value": "100nF",
-    "footprint": "Capacitor_SMD:C_0805_2012Metric",
-    "nets": {
-      "1": "LITTLE",
-      "2": "GND"
+    },
+    "at": [
+      175.26,
+      179.07
+    ],
+    "fields": {
+      "Reference": "SW2",
+      "Value": "BOOT",
+      "Footprint": "Button_Switch_THT:SW_PUSH_6mm"
     }
   },
   "R6": {
-    "uuid": "a394f374-93dc-5f95-8041-590d2c1acd97",
+    "uuid": "5284ee57-601e-54c3-8c13-992263af5770",
+    "lib": "Device:R_Small_US",
     "value": "10kR",
     "footprint": "Resistor_SMD:R_0805_2012Metric",
     "nets": {
       "1": "+3V3",
       "2": "ENABLE"
+    },
+    "at": [
+      251.46,
+      146.05
+    ],
+    "fields": {
+      "Reference": "R6",
+      "Value": "10kR",
+      "Footprint": "Resistor_SMD:R_0805_2012Metric"
     }
   },
   "C6": {
-    "uuid": "df7e43d8-cf46-52b5-ac3b-ae840cb6543e",
+    "uuid": "d49841b7-fd59-5ca2-b92b-96a24f32721a",
+    "lib": "Device:C",
     "value": "100nF",
     "footprint": "Capacitor_SMD:C_0805_2012Metric",
     "nets": {
       "1": "ENABLE",
       "2": "GND"
+    },
+    "at": [
+      275.59,
+      166.37
+    ],
+    "fields": {
+      "Reference": "C6",
+      "Value": "100nF",
+      "Footprint": "Capacitor_SMD:C_0805_2012Metric",
+      "MPN": "CC0805KRX7R9BB104",
+      "Manufacturer": "Yageo",
+      "LCSC": "C49678"
     }
   },
   "R7": {
-    "uuid": "c9977fab-84b2-5ead-be67-059bf668c0cc",
+    "uuid": "511cf52c-7584-5fdf-9cb5-e2f7bc6ebe1f",
+    "lib": "Device:R_Small_US",
     "value": "1kR",
     "footprint": "Resistor_SMD:R_0805_2012Metric",
     "nets": {
       "1": "ENABLE",
       "2": "SW"
+    },
+    "at": [
+      251.46,
+      167.64
+    ],
+    "fields": {
+      "Reference": "R7",
+      "Value": "1kR",
+      "Footprint": "Resistor_SMD:R_0805_2012Metric"
     }
   },
   "J9": {
-    "uuid": "8ee58410-e3d3-5d28-bd2a-03ad5e37bc9c",
-    "value": "EXTERNAL N.O.",
+    "uuid": "2c73b3eb-14af-5988-ba92-74ad249add56",
+    "lib": "PalmPilot:Switch",
+    "value": "ENABLE N.O.",
     "footprint": "Connector_JST:JST_PH_B2B-PH-K_1x02_P2.00mm_Vertical",
     "nets": {
       "1": "SW",
       "2": "GND"
+    },
+    "at": [
+      302.26,
+      184.15
+    ],
+    "fields": {
+      "Reference": "J9",
+      "Value": "ENABLE N.O.",
+      "Footprint": "Connector_JST:JST_PH_B2B-PH-K_1x02_P2.00mm_Vertical"
     }
   },
   "J2": {
-    "uuid": "29083824-0fae-53f3-aff8-7faa9a78bc61",
+    "uuid": "ce5e42a3-36e8-50da-bc85-1ca47eba0e81",
+    "lib": "PalmPilot:IMU",
     "value": "PH-4 HARNESS",
     "footprint": "Connector_JST:JST_PH_B4B-PH-K_1x04_P2.00mm_Vertical",
     "nets": {
@@ -207,6 +433,342 @@
       "2": "+3V3",
       "3": "SDA",
       "4": "SCL"
+    },
+    "at": [
+      351.79,
+      157.48
+    ],
+    "fields": {
+      "Reference": "J2",
+      "Value": "PH-4 HARNESS",
+      "Footprint": "Connector_JST:JST_PH_B4B-PH-K_1x04_P2.00mm_Vertical"
+    }
+  },
+  "J4": {
+    "uuid": "2196dd8c-030c-59f8-883a-0c22178152ce",
+    "lib": "PalmPilot:Flex",
+    "value": "THUMB",
+    "footprint": "Connector_JST:JST_PH_B2B-PH-K_1x02_P2.00mm_Vertical",
+    "nets": {
+      "1": "+3V3",
+      "2": "THUMB"
+    },
+    "at": [
+      17.78,
+      223.52
+    ],
+    "fields": {
+      "Reference": "J4",
+      "Value": "THUMB",
+      "Footprint": "Connector_JST:JST_PH_B2B-PH-K_1x02_P2.00mm_Vertical"
+    }
+  },
+  "R1": {
+    "uuid": "37bb1c28-a870-5ef0-80cc-14024a321466",
+    "lib": "Device:R_Small_US",
+    "value": "47kR 1%",
+    "footprint": "Resistor_SMD:R_0805_2012Metric",
+    "nets": {
+      "1": "THUMB",
+      "2": "GND"
+    },
+    "at": [
+      33.02,
+      231.14
+    ],
+    "fields": {
+      "Reference": "R1",
+      "Value": "47kR 1%",
+      "Footprint": "Resistor_SMD:R_0805_2012Metric"
+    }
+  },
+  "C1": {
+    "uuid": "6611b5c7-2071-5ba4-bfac-4eae88662ed4",
+    "lib": "Device:C",
+    "value": "100nF",
+    "footprint": "Capacitor_SMD:C_0805_2012Metric",
+    "nets": {
+      "1": "THUMB",
+      "2": "GND"
+    },
+    "at": [
+      49.53,
+      231.14
+    ],
+    "fields": {
+      "Reference": "C1",
+      "Value": "100nF",
+      "Footprint": "Capacitor_SMD:C_0805_2012Metric",
+      "MPN": "CC0805KRX7R9BB104",
+      "Manufacturer": "Yageo",
+      "LCSC": "C49678"
+    }
+  },
+  "J5": {
+    "uuid": "4d5b2e18-53f4-51a2-8d3d-23c151234e02",
+    "lib": "PalmPilot:Flex",
+    "value": "INDEX",
+    "footprint": "Connector_JST:JST_PH_B2B-PH-K_1x02_P2.00mm_Vertical",
+    "nets": {
+      "1": "+3V3",
+      "2": "INDEX"
+    },
+    "at": [
+      71.12,
+      223.52
+    ],
+    "fields": {
+      "Reference": "J5",
+      "Value": "INDEX",
+      "Footprint": "Connector_JST:JST_PH_B2B-PH-K_1x02_P2.00mm_Vertical"
+    }
+  },
+  "R2": {
+    "uuid": "5ae9de9e-6ee1-5150-9a76-eddc407fbdfe",
+    "lib": "Device:R_Small_US",
+    "value": "47kR 1%",
+    "footprint": "Resistor_SMD:R_0805_2012Metric",
+    "nets": {
+      "1": "INDEX",
+      "2": "GND"
+    },
+    "at": [
+      86.36,
+      231.14
+    ],
+    "fields": {
+      "Reference": "R2",
+      "Value": "47kR 1%",
+      "Footprint": "Resistor_SMD:R_0805_2012Metric"
+    }
+  },
+  "C2": {
+    "uuid": "2dc5172b-d925-521e-a197-f4ae003621c8",
+    "lib": "Device:C",
+    "value": "100nF",
+    "footprint": "Capacitor_SMD:C_0805_2012Metric",
+    "nets": {
+      "1": "INDEX",
+      "2": "GND"
+    },
+    "at": [
+      101.6,
+      231.14
+    ],
+    "fields": {
+      "Reference": "C2",
+      "Value": "100nF",
+      "Footprint": "Capacitor_SMD:C_0805_2012Metric",
+      "MPN": "CC0805KRX7R9BB104",
+      "Manufacturer": "Yageo",
+      "LCSC": "C49678"
+    }
+  },
+  "J6": {
+    "uuid": "feee12cf-1b57-56c2-802c-bb9265d329ae",
+    "lib": "PalmPilot:Flex",
+    "value": "MIDDLE",
+    "footprint": "Connector_JST:JST_PH_B2B-PH-K_1x02_P2.00mm_Vertical",
+    "nets": {
+      "1": "+3V3",
+      "2": "MIDDLE"
+    },
+    "at": [
+      124.46,
+      223.52
+    ],
+    "fields": {
+      "Reference": "J6",
+      "Value": "MIDDLE",
+      "Footprint": "Connector_JST:JST_PH_B2B-PH-K_1x02_P2.00mm_Vertical"
+    }
+  },
+  "R3": {
+    "uuid": "6a39d62d-c872-524a-819a-c40784001496",
+    "lib": "Device:R_Small_US",
+    "value": "47kR 1%",
+    "footprint": "Resistor_SMD:R_0805_2012Metric",
+    "nets": {
+      "1": "MIDDLE",
+      "2": "GND"
+    },
+    "at": [
+      138.43,
+      231.14
+    ],
+    "fields": {
+      "Reference": "R3",
+      "Value": "47kR 1%",
+      "Footprint": "Resistor_SMD:R_0805_2012Metric"
+    }
+  },
+  "C3": {
+    "uuid": "17491514-3f03-51f8-bd23-c6011f7df077",
+    "lib": "Device:C",
+    "value": "100nF",
+    "footprint": "Capacitor_SMD:C_0805_2012Metric",
+    "nets": {
+      "1": "MIDDLE",
+      "2": "GND"
+    },
+    "at": [
+      154.94,
+      231.14
+    ],
+    "fields": {
+      "Reference": "C3",
+      "Value": "100nF",
+      "Footprint": "Capacitor_SMD:C_0805_2012Metric",
+      "MPN": "CC0805KRX7R9BB104",
+      "Manufacturer": "Yageo",
+      "LCSC": "C49678"
+    }
+  },
+  "J7": {
+    "uuid": "6b63a8d9-9ca9-5a61-9af9-cb1f6a44e57d",
+    "lib": "PalmPilot:Flex",
+    "value": "RING",
+    "footprint": "Connector_JST:JST_PH_B2B-PH-K_1x02_P2.00mm_Vertical",
+    "nets": {
+      "1": "+3V3",
+      "2": "RING"
+    },
+    "at": [
+      176.53,
+      223.52
+    ],
+    "fields": {
+      "Reference": "J7",
+      "Value": "RING",
+      "Footprint": "Connector_JST:JST_PH_B2B-PH-K_1x02_P2.00mm_Vertical"
+    }
+  },
+  "R4": {
+    "uuid": "b933ffe5-35ae-58c9-a832-b1e4f915e268",
+    "lib": "Device:R_Small_US",
+    "value": "47kR 1%",
+    "footprint": "Resistor_SMD:R_0805_2012Metric",
+    "nets": {
+      "1": "RING",
+      "2": "GND"
+    },
+    "at": [
+      191.77,
+      231.14
+    ],
+    "fields": {
+      "Reference": "R4",
+      "Value": "47kR 1%",
+      "Footprint": "Resistor_SMD:R_0805_2012Metric"
+    }
+  },
+  "C4": {
+    "uuid": "31582288-323f-5221-87a2-b2861289d6b7",
+    "lib": "Device:C",
+    "value": "100nF",
+    "footprint": "Capacitor_SMD:C_0805_2012Metric",
+    "nets": {
+      "1": "RING",
+      "2": "GND"
+    },
+    "at": [
+      208.28,
+      231.14
+    ],
+    "fields": {
+      "Reference": "C4",
+      "Value": "100nF",
+      "Footprint": "Capacitor_SMD:C_0805_2012Metric",
+      "MPN": "CC0805KRX7R9BB104",
+      "Manufacturer": "Yageo",
+      "LCSC": "C49678"
+    }
+  },
+  "J8": {
+    "uuid": "4704b3ce-0661-56e2-8233-105c580c99e3",
+    "lib": "PalmPilot:Flex",
+    "value": "LITTLE",
+    "footprint": "Connector_JST:JST_PH_B2B-PH-K_1x02_P2.00mm_Vertical",
+    "nets": {
+      "1": "+3V3",
+      "2": "LITTLE"
+    },
+    "at": [
+      229.87,
+      223.52
+    ],
+    "fields": {
+      "Reference": "J8",
+      "Value": "LITTLE",
+      "Footprint": "Connector_JST:JST_PH_B2B-PH-K_1x02_P2.00mm_Vertical"
+    }
+  },
+  "R5": {
+    "uuid": "3198e239-4ee1-5931-a556-6fef24b93f9f",
+    "lib": "Device:R_Small_US",
+    "value": "47kR 1%",
+    "footprint": "Resistor_SMD:R_0805_2012Metric",
+    "nets": {
+      "1": "LITTLE",
+      "2": "GND"
+    },
+    "at": [
+      245.11,
+      231.14
+    ],
+    "fields": {
+      "Reference": "R5",
+      "Value": "47kR 1%",
+      "Footprint": "Resistor_SMD:R_0805_2012Metric"
+    }
+  },
+  "C5": {
+    "uuid": "384b3db9-6126-5137-ac77-65066c7d98b9",
+    "lib": "Device:C",
+    "value": "100nF",
+    "footprint": "Capacitor_SMD:C_0805_2012Metric",
+    "nets": {
+      "1": "LITTLE",
+      "2": "GND"
+    },
+    "at": [
+      261.62,
+      231.14
+    ],
+    "fields": {
+      "Reference": "C5",
+      "Value": "100nF",
+      "Footprint": "Capacitor_SMD:C_0805_2012Metric",
+      "MPN": "CC0805KRX7R9BB104",
+      "Manufacturer": "Yageo",
+      "LCSC": "C49678"
+    }
+  },
+  "D1": {
+    "uuid": "e8164918-9aa6-5bad-b8c9-ed1fcd81a994",
+    "lib": "Power_Protection:USBLC6-2SC6",
+    "value": "USBLC6-2SC6",
+    "footprint": "Package_TO_SOT_SMD:SOT-23-6",
+    "nets": {
+      "1": "USB_P",
+      "2": "GND",
+      "3": "USB_M",
+      "4": "USB_M",
+      "5": "+5V",
+      "6": "USB_P"
+    },
+    "at": [
+      341.63,
+      228.6
+    ],
+    "fields": {
+      "Reference": "D1",
+      "Value": "USBLC6-2SC6",
+      "Footprint": "Package_TO_SOT_SMD:SOT-23-6",
+      "MPN": "USBLC6-2SC6",
+      "Manufacturer": "STMicroelectronics",
+      "LCSC": "C7519",
+      "Datasheet": "https://www.st.com/resource/en/datasheet/usblc6-2.pdf"
     }
   }
 }

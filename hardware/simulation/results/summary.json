@@ -1,4 +1,78 @@
 {
+  "module_en": [
+    {
+      "R_ohm": 9900.0,
+      "C_F": 8e-07,
+      "enable_75percent_after_rail_ms": 10.48471169354839,
+      "reset_held_V": 0.000333299667,
+      "released_V": 3.27601278176
+    },
+    {
+      "R_ohm": 9900.0,
+      "C_F": 1.2e-06,
+      "enable_75percent_after_rail_ms": 15.972684331797236,
+      "reset_held_V": 0.000333299667,
+      "released_V": 3.17617463142
+    },
+    {
+      "R_ohm": 10100.0,
+      "C_F": 8e-07,
+      "enable_75percent_after_rail_ms": 10.706414699833514,
+      "reset_held_V": 0.000326700327,
+      "released_V": 3.27355600784
+    },
+    {
+      "R_ohm": 10100.0,
+      "C_F": 1.2e-06,
+      "enable_75percent_after_rail_ms": 16.305325473777,
+      "reset_held_V": 0.000326700327,
+      "released_V": 3.16785783641
+    }
+  ],
+  "module_rail_sensitivity": [
+    {
+      "source_R_ohm": 0.05,
+      "feed_L_uH": 0.5,
+      "bulk_effective_uF": 20,
+      "load_A": [
+        0.03,
+        0.5
+      ],
+      "min_V": 3.22493227,
+      "max_V": 3.34856685
+    },
+    {
+      "source_R_ohm": 0.15,
+      "feed_L_uH": 0.5,
+      "bulk_effective_uF": 20,
+      "load_A": [
+        0.03,
+        0.5
+      ],
+      "min_V": 3.20573495,
+      "max_V": 3.31476511
+    },
+    {
+      "source_R_ohm": 0.3,
+      "feed_L_uH": 0.5,
+      "bulk_effective_uF": 20,
+      "load_A": [
+        0.03,
+        0.5
+      ],
+      "min_V": 3.15,
+      "max_V": 3.291
+    }
+  ],
+  "thermal_reference": {
+    "VIN_V": 5.25,
+    "VOUT_V": 3.3,
+    "load_A": 0.5,
+    "LDO_dissipation_W": 0.975,
+    "TI_reference_theta_JA_C_per_W": 62.9,
+    "reference_rise_C": 61.3275,
+    "note": "Reference-board estimate only. Actual PCB and skin temperatures require measurement."
+  },
   "solver": [
     "** ngspice-47 : Circuit level simulation program",
     "** Compiled with KLU Direct Linear Solver"
@@ -7,24 +81,23 @@
     {
       "side": "left",
       "result": "PASS",
-      "schematic_sha256": "0ce7221b7cdd18f392eec2fc6d98dedd82b294faddc704b16fde6be67203612c",
-      "netlist_sha256": "2b1a5c8ee14508fb660352c2c0fcd3843d5dd4a2d9976d95885abdb30ca61e64",
-      "board_sha256": "4a68e080480e37377cc56fe296f9175a257f796532d68a7e25c59ecb45d16400"
+      "schematic_sha256": "d6630cb3884c4f551c280de58ff4c466248d67b76de608695b9a5a3e73ac2672",
+      "netlist_sha256": "a54cb467611ed3e12f59476fc557d7082c3b063e40ec96e4a900597794370e82",
+      "board_sha256": "22e548d3ebfe18b0ec32d19bfa5de7658dfc04f507fb702434507cd9afc25823"
     },
     {
       "side": "right",
       "result": "PASS",
-      "schematic_sha256": "9b1b193dff7e79ebd3244a50303898d69ba8eff550c6e37d5da681ec4d9fda73",
-      "netlist_sha256": "789e9e34b55de6d51139483b35d49293c573705490fc219d507f0cae67c501bf",
-      "board_sha256": "f1e182bdd268876462b11f1131ec313442958fef6c54e3900a5e25b456b7834b"
+      "schematic_sha256": "910b113724fb4fd09309288eeb7cf6999dd05391edded75a1f490fb438c3877c",
+      "netlist_sha256": "ee931f17fc6cebd6e50e37d8e7a9591045b987897697b12f1f7aa8d62e0c9bd8",
+      "board_sha256": "9ee5e74d13afcaa7ec4707ff3bd39b9c04b122654b2b17fc5d3ed5cce2b3c2a5"
     },
     {
       "side": "hub",
       "result": "PASS",
-      "schematic_sha256": "f16444457a5e5163266a6690523ae4127bc1cef1a4bc7bc7af9898693fb21d05",
-      "netlist_sha256": "271480179bfff32ed16dea9a3847b956d3833fd560aa7cf69f0cf31bcfb707f6",
-      "board_sha256": "53ba00cd6a077b4f545efc8a8295735c4c2749465453c4de1aef8b3e84b8fbe1",
-      "simulation": "Same verified passive button topology and values as LEFT; the ENABLE SPICE deck also represents HUB CALIBRATE."
+      "schematic_sha256": "22189538ad154ee4031486b66e21d7e092c16b338118384adf05d0d0403c1321",
+      "netlist_sha256": "7122239d101fb12c78d041ff4d12893bd95717d8a7bef337e8624a35764a281e",
+      "board_sha256": "d2b4a648ab6f94491b0e9a90b6441f03019f34aebcb4f7393ebb02a633d06fbd"
     }
   ],
   "flex": [

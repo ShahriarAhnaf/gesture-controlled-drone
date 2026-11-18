@@ -1,6 +1,6 @@
 # Schematic simulation before commit
 
-17 November 2026. Status: passive-circuit simulations completed; hardware sign-off
+18 November 2026. Rev B direct-module circuits. Status: passive-circuit simulations completed; hardware sign-off
 pending. See `results/summary.json` for
 source schematic, PCB and exported-netlist SHA-256 hashes.
 
@@ -14,7 +14,7 @@ simulation. The hub and LEFT button networks have identical verified passive
 values and connectivity, so the same button deck represents both.
 
 The scope is passive electrical response. No vendor-accurate ESP32 ADC, RF,
-DevKit regulator, sensor silicon, BSS138 level-shifter or full firmware model is
+LDO control loop, sensor silicon, BSS138 level-shifter or full firmware model is
 claimed. The I2C and ADC charge tests are explicitly simplified sensitivities.
 
 ## Results and acceptance criteria
@@ -57,11 +57,27 @@ must be evaluated together.
    two sampled observations; HUB uses one. Firmware behavior over all sample
    phases and real switch bounce remains a separate test. The upstream bench hub
    profile ignores CALIBRATE entirely.
-4. **Power and RF:** the carrier distributes only sensor/button current from the
-   DevKit 3V3 output; the MCU's USB regulator remains on the DevKit. Its transient
-   impedance, BLE current bursts, antenna detuning on a hand, conducted noise and
-   wearable thermal behavior were not modeled. Measure local rails during radio
-   traffic and confirm reliable operation with the actual USB cables.
+4. **Power and RF:** the new PCB includes its own TLV1117LV33 regulator and
+   module bulk/bypass network. The new rail sweep represents an ideal 3.3 V
+   source behind 0.05/0.15/0.30 R and 0.5 uH with 20 uF total effective bulk
+   capacitance (10 uF assumed for each nominal 22 uF output/module capacitor)
+   and 20 mR ESR. A 30 mA to 500 mA, 1 us load step remains between
+   **3.150 and 3.349 V** across these scenarios. This is a source-impedance
+   sensitivity, not a vendor LDO model or proof of stability or actual droop.
+   Actual MLCC DC-bias derating, regulator loop, cable input droop, peak radio
+   current and physical power path require measurement. At 5.25 V input and
+   0.5 A, estimated regulator dissipation is **0.975 W**. TI's reference-board
+   62.9 C/W value implies about 61 C rise, and is not the thermal resistance
+   of this PCB. Sustained-load and worn temperatures remain unqualified.
+5. **Module EN:** 10 kR ±1% and 1 uF ±20%, with an ideal 1 ms rail ramp,
+   cross 75% of 3.3 V **10.48–16.31 ms after the rail finishes rising**.
+   A modeled 10 ms manual reset with a 1 R closed switch holds EN below
+   **0.334 mV**, then releases above VIH. This checks passive timing only;
+   it does not emulate boot ROM, brownout behavior, switch ESD or firmware.
+6. **USB:** netlist checks verify CH340C V3/VCC at 3V3, crossed UART0 TX/RX,
+   D+/D−, ESD channels, grounded connector shield and intended NCs. No USB
+   signal-integrity, enumeration or ESD-discharge simulation was performed.
+   The selected module has built-in PCB antenna; worn RF behavior is unmeasured.
 
 ## Numerical checks and retained evidence
 
@@ -82,3 +98,5 @@ separate in `../build/<project>/`.
 - [NXP UM10204 Rev 7](https://www.nxp.com/docs/en/user-guide/UM10204.pdf): Standard-mode 1000 ns rise-time limit and RC pull-up relation.
 - [Adafruit #5543 CAD](https://github.com/adafruit/Adafruit-LSM6DS3TR-C-LIS3MDL-PCB): 10 kR pull-ups, BSS138 translation, default module topology.
 - `../../firmware/components/palmpilot_core/hand_core.h`, `board.h` and `../../firmware/apps/hub/main/hub_main.c`: frozen pins, provisional raw thresholds and debounce constants.
+
+Rev B also retains `module_en_*.cir` / `module_rail_*.cir` and `module-power-reset.png`. TI TLV1117LV and WCH CH340 manufacturer references are listed in the hardware README.

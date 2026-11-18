@@ -1,0 +1,40 @@
+{
+  "revision": "B",
+  "implementation": "ESP32-S3-WROOM-1-N16R8 direct solder; built-in PCB antenna",
+  "status": "engineering review; bench qualification pending",
+  "boards": {
+    "left": {
+      "schematic_sha256": "d6630cb3884c4f551c280de58ff4c466248d67b76de608695b9a5a3e73ac2672",
+      "board_sha256": "22e548d3ebfe18b0ec32d19bfa5de7658dfc04f507fb702434507cd9afc25823",
+      "glb_sha256": "267fe5e9b5cfef91c522b814db709d6b04d8ee3e80cf84f90f1c80f90bb71e5d",
+      "ERC": "0 messages",
+      "DRC": "0 violations; 0 opens; 0 footprint/parity errors",
+      "native_connectivity": "PASS",
+      "routing_angles": "H/V/45 PASS",
+      "simulation_binding": "PASS",
+      "render_binding": "PASS"
+    },
+    "right": {
+      "schematic_sha256": "910b113724fb4fd09309288eeb7cf6999dd05391edded75a1f490fb438c3877c",
+      "board_sha256": "9ee5e74d13afcaa7ec4707ff3bd39b9c04b122654b2b17fc5d3ed5cce2b3c2a5",
+      "glb_sha256": "22bdd3576b5ad507bda44ff3f992a7d57a4872d9828272e05810ac447dad8eb8",
+      "ERC": "0 messages",
+      "DRC": "0 violations; 0 opens; 0 footprint/parity errors",
+      "native_connectivity": "PASS",
+      "routing_angles": "H/V/45 PASS",
+      "simulation_binding": "PASS",
+      "render_binding": "PASS"
+    },
+    "hub": {
+      "schematic_sha256": "22189538ad154ee4031486b66e21d7e092c16b338118384adf05d0d0403c1321",
+      "board_sha256": "d2b4a648ab6f94491b0e9a90b6441f03019f34aebcb4f7393ebb02a633d06fbd",
+      "glb_sha256": "fbaad4eb811d9fa6132b5e8b41fa55d287152c97abafc910d30f2cb543a12448",
+      "ERC": "0 messages",
+      "DRC": "0 violations; 0 opens; 0 footprint/parity errors",
+      "native_connectivity": "PASS",
+      "routing_angles": "H/V/45 PASS",
+      "simulation_binding": "PASS",
+      "render_binding": "PASS"
+    }
+  }
+}

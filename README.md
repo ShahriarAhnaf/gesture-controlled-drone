@@ -40,6 +40,12 @@ Full table, deadbands and safety interlocks: [docs/gesture-mapping.md](docs/gest
 Three ESP32-S3 DevKits, ten flex sensors and two Adafruit LSM6DS3TR-C + LIS3MDL
 motion breakouts, on breadboards for now.
 
+The [Rev B PCB design](hardware/README.md) replaces the DevKits with directly
+soldered ESP32-S3-WROOM-1 modules on both hands and the hub. It includes KiCad
+schematics, four-layer routing, fabrication review exports, passive simulation
+evidence and Blender hand renders. The PCB revision still needs bench
+qualification; the breadboard results above do not validate the new boards.
+
 ![Left hand wiring](docs/wiring/left-hand.png)
 
 Parts: [docs/bom.md](docs/bom.md). Wiring for each board: [docs/wiring/](docs/wiring/README.md).
@@ -96,6 +102,7 @@ firmware/tests/         simulation test suites; run_all.sh runs them all
 firmware/tools/         build and simulation wrappers; bench/ has tools for the physical boards
 simulation/drone/       the bridge to ArduCopter, the physics model, the 3D view
 docs/                   design, wiring, tests and notes
+hardware/               Rev B module PCBs, electrical evidence and Blender assembly
 ```
 
 Contributing: [CONTRIBUTING.md](CONTRIBUTING.md).

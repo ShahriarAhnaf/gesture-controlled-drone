@@ -1,13 +1,13 @@
 {
   "scene_units": "meters",
-  "carrier_origin": "KiCad GLB origin (x, -PCB_y, z); translate (-0.033,0.088,0.025)",
+  "carrier_origin": "KiCad GLB origin (x, -PCB_y, z); translate (-0.025,0.078,0.024)",
   "hand_asset_revision": "f4992299601614adbfefd398dc8e281556bb7444",
-  "components": "DevKit and IMU approximate envelopes; PCB geometry imported without scaling",
+  "components": "Direct-soldered WROOM, PCB and supported component geometry imported without scaling. No DevKit, sockets or added module proxies. IMU and missing USB shell are illustrative.",
   "hands": [
     {
       "side": "left",
       "asset_sha256": "bc67783144944ea1cda54d9247885825ea5fb9d4651469fe7d00be517a5c2b87",
-      "board_sha256": "4a68e080480e37377cc56fe296f9175a257f796532d68a7e25c59ecb45d16400",
+      "board_sha256": "22e548d3ebfe18b0ec32d19bfa5de7658dfc04f507fb702434507cd9afc25823",
       "sensor_visual_path_lengths_mm": {
         "thumb": 77.57000134950056,
         "index-finger": 77.56999690737062,
@@ -20,7 +20,7 @@
     {
       "side": "right",
       "asset_sha256": "291790c14f7f88a7f9bd35330c47392ed8e8d395ae6728f4bb7089f1bc1f2b96",
-      "board_sha256": "f1e182bdd268876462b11f1131ec313442958fef6c54e3900a5e25b456b7834b",
+      "board_sha256": "9ee5e74d13afcaa7ec4707ff3bd39b9c04b122654b2b17fc5d3ed5cce2b3c2a5",
       "sensor_visual_path_lengths_mm": {
         "thumb": 77.57000252555167,
         "index-finger": 77.56999526182693,
@@ -32,10 +32,10 @@
     }
   ],
   "hub": {
-    "board_sha256": "53ba00cd6a077b4f545efc8a8295735c4c2749465453c4de1aef8b3e84b8fbe1",
+    "board_sha256": "d2b4a648ab6f94491b0e9a90b6441f03019f34aebcb4f7393ebb02a633d06fbd",
     "transform_m": [
-      -0.027,
-      0.044,
+      -0.025,
+      0.035,
       0.019
     ]
   }

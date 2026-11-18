@@ -1,26 +1,39 @@
-Reference,Value,Footprint,Quantity
-J1,1x22 SOCKET,Connector_PinSocket_2.54mm:PinSocket_1x22_P2.54mm_Vertical,1
-J3,1x22 SOCKET,Connector_PinSocket_2.54mm:PinSocket_1x22_P2.54mm_Vertical,1
-J4,THUMB,Connector_JST:JST_PH_B2B-PH-K_1x02_P2.00mm_Vertical,1
-R1,47kR 1%,Resistor_SMD:R_0805_2012Metric,1
-C1,100nF,Capacitor_SMD:C_0805_2012Metric,1
-J5,INDEX,Connector_JST:JST_PH_B2B-PH-K_1x02_P2.00mm_Vertical,1
-R2,47kR 1%,Resistor_SMD:R_0805_2012Metric,1
-C2,100nF,Capacitor_SMD:C_0805_2012Metric,1
-J6,MIDDLE,Connector_JST:JST_PH_B2B-PH-K_1x02_P2.00mm_Vertical,1
-R3,47kR 1%,Resistor_SMD:R_0805_2012Metric,1
-C3,100nF,Capacitor_SMD:C_0805_2012Metric,1
-J7,RING,Connector_JST:JST_PH_B2B-PH-K_1x02_P2.00mm_Vertical,1
-R4,47kR 1%,Resistor_SMD:R_0805_2012Metric,1
-C4,100nF,Capacitor_SMD:C_0805_2012Metric,1
-J8,LITTLE,Connector_JST:JST_PH_B2B-PH-K_1x02_P2.00mm_Vertical,1
-R5,47kR 1%,Resistor_SMD:R_0805_2012Metric,1
-C5,100nF,Capacitor_SMD:C_0805_2012Metric,1
-R6,10kR,Resistor_SMD:R_0805_2012Metric,1
-C6,100nF,Capacitor_SMD:C_0805_2012Metric,1
-R7,1kR,Resistor_SMD:R_0805_2012Metric,1
-J9,EXTERNAL N.O.,Connector_JST:JST_PH_B2B-PH-K_1x02_P2.00mm_Vertical,1
-J2,PH-4 HARNESS,Connector_JST:JST_PH_B4B-PH-K_1x04_P2.00mm_Vertical,1
-MODULE,ESP32-S3-DevKitC-1-N8R8,"Plug-in module, not reflowed",1
+Reference,Value,Footprint,Quantity,Manufacturer,MPN,LCSC
+U1,ESP32-S3-WROOM-1-N16R8,PalmPilotModules:ESP32-S3-WROOM-1,1,Espressif Systems,ESP32-S3-WROOM-1-N16R8,C2913202
+C10,22uF 25V X5R,Capacitor_SMD:C_1206_3216Metric,1,Samsung Electro-Mechanics,CL31A226KAHNNNE,C12891
+C11,100nF,Capacitor_SMD:C_0805_2012Metric,1,Yageo,CC0805KRX7R9BB104,C49678
+U2,CH340C / 3V3 MODE,Package_SO:SOIC-16_3.9x9.9mm_P1.27mm,1,WCH,CH340C,C84681
+C22,100nF,Capacitor_SMD:C_0805_2012Metric,1,Yageo,CC0805KRX7R9BB104,C49678
+C23,100nF,Capacitor_SMD:C_0805_2012Metric,1,Yageo,CC0805KRX7R9BB104,C49678
+J1,USB MICRO-B,Connector_USB:USB_Micro-B_Molex-105017-0001,1,Molex,1050170001,C136000
+U3,TLV1117LV33DCYR,Package_TO_SOT_SMD:SOT-223-3_TabPin2,1,Texas Instruments,TLV1117LV33DCYR,C15578
+C12,22uF 25V X5R,Capacitor_SMD:C_1206_3216Metric,1,Samsung Electro-Mechanics,CL31A226KAHNNNE,C12891
+C13,22uF 25V X5R,Capacitor_SMD:C_1206_3216Metric,1,Samsung Electro-Mechanics,CL31A226KAHNNNE,C12891
+R20,10kR,Resistor_SMD:R_0805_2012Metric,1,,,
+C20,1uF,Capacitor_SMD:C_0805_2012Metric,1,Samsung Electro-Mechanics,CL21B105KBFNNNE,C28323
+SW1,RESET,Button_Switch_THT:SW_PUSH_6mm,1,,,
+R21,10kR,Resistor_SMD:R_0805_2012Metric,1,,,
+SW2,BOOT,Button_Switch_THT:SW_PUSH_6mm,1,,,
+R6,10kR,Resistor_SMD:R_0805_2012Metric,1,,,
+C6,100nF,Capacitor_SMD:C_0805_2012Metric,1,Yageo,CC0805KRX7R9BB104,C49678
+R7,1kR,Resistor_SMD:R_0805_2012Metric,1,,,
+J9,ENABLE N.O.,Connector_JST:JST_PH_B2B-PH-K_1x02_P2.00mm_Vertical,1,,,
+J2,PH-4 HARNESS,Connector_JST:JST_PH_B4B-PH-K_1x04_P2.00mm_Vertical,1,,,
+J4,THUMB,Connector_JST:JST_PH_B2B-PH-K_1x02_P2.00mm_Vertical,1,,,
+R1,47kR 1%,Resistor_SMD:R_0805_2012Metric,1,,,
+C1,100nF,Capacitor_SMD:C_0805_2012Metric,1,Yageo,CC0805KRX7R9BB104,C49678
+J5,INDEX,Connector_JST:JST_PH_B2B-PH-K_1x02_P2.00mm_Vertical,1,,,
+R2,47kR 1%,Resistor_SMD:R_0805_2012Metric,1,,,
+C2,100nF,Capacitor_SMD:C_0805_2012Metric,1,Yageo,CC0805KRX7R9BB104,C49678
+J6,MIDDLE,Connector_JST:JST_PH_B2B-PH-K_1x02_P2.00mm_Vertical,1,,,
+R3,47kR 1%,Resistor_SMD:R_0805_2012Metric,1,,,
+C3,100nF,Capacitor_SMD:C_0805_2012Metric,1,Yageo,CC0805KRX7R9BB104,C49678
+J7,RING,Connector_JST:JST_PH_B2B-PH-K_1x02_P2.00mm_Vertical,1,,,
+R4,47kR 1%,Resistor_SMD:R_0805_2012Metric,1,,,
+C4,100nF,Capacitor_SMD:C_0805_2012Metric,1,Yageo,CC0805KRX7R9BB104,C49678
+J8,LITTLE,Connector_JST:JST_PH_B2B-PH-K_1x02_P2.00mm_Vertical,1,,,
+R5,47kR 1%,Resistor_SMD:R_0805_2012Metric,1,,,
+C5,100nF,Capacitor_SMD:C_0805_2012Metric,1,Yageo,CC0805KRX7R9BB104,C49678
+D1,USBLC6-2SC6,Package_TO_SOT_SMD:SOT-23-6,1,STMicroelectronics,USBLC6-2SC6,C7519
 IMU,Adafruit #5543,External cabled breakout,1
 FLEX,Adafruit #1070,External flex sensor,5

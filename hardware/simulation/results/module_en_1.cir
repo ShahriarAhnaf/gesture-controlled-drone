@@ -1,0 +1,17 @@
+* PalmPilot module_en_1; extracted passive topology, explicit approximations
+VDD vdd 0 PWL(0 0 1m 0 2m 3.3)
+Rpull vdd en 9900.0
+Cen en 0 1.2e-06
+Vreset ctl 0 PULSE(0 1 80m 1u 1u 10m 1)
+Sreset en 0 ctl 0 BTN
+.model BTN SW(Ron=1 Roff=1e12 Vt=.5 Vh=.05)
+
+.options reltol=1e-6 abstol=1e-12 vntol=1e-8
+.control
+set wr_singlescale
+set wr_vecnames
+tran 1u 130m 0 1u
+wrdata /Users/anoof/Documents/Codex/2026-11-17/https-github-com-samiurr10-gesture-controlled-2/work/gesture-controlled-drone/hardware/simulation/results/module_en_1.dat v(en) v(vdd)
+quit
+.endc
+.end

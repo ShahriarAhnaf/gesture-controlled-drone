@@ -1,0 +1,17 @@
+* PalmPilot module_rail_2; extracted passive topology, explicit approximations
+Vreg reg 0 3.3
+Rsource reg a 0.3
+Lfeed a rail .5u
+Resr rail cap .02
+Cbulk cap 0 20u
+Iload rail 0 PULSE(.03 .5 1m 1u 1u 5m 12m)
+
+.options reltol=1e-6 abstol=1e-12 vntol=1e-8
+.control
+set wr_singlescale
+set wr_vecnames
+tran .05u 10m 0 .05u
+wrdata /Users/anoof/Documents/Codex/2026-11-17/https-github-com-samiurr10-gesture-controlled-2/work/gesture-controlled-drone/hardware/simulation/results/module_rail_2.dat v(rail)
+quit
+.endc
+.end

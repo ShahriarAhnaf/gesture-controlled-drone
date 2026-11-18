@@ -1,14 +1,15 @@
 # Worn assembly render
 
-`two-hands.png` and `left-hand-detail.png` were rendered in Blender 5.2.1 LTS.
+`two-hands.png`, `module-on-hand.png`, `left-hand-detail.png`,
+`right-hand-detail.png` and `hub-detail.png` were rendered in Blender 5.2.1 LTS.
 `palmpilot-two-hands.blend` is editable and contains both hands and the hub.
 
-The rigid carrier geometry, connector bodies, sockets, passives and hub button
+The rigid PCB geometry, directly soldered WROOM module, supported connector bodies, passives and buttons
 come from KiCad GLB exports at **1:1 metric scale**. `assembly-manifest.json`
 records the board hashes, hand asset hashes and the carrier origin transforms.
 Changing a PCB invalidates the associated exported GLB and render evidence.
 
-The DevKit and Adafruit breakout envelopes, screws, straps, wrist extensions,
+There is no DevKit or module proxy. The missing Micro-B shell, Adafruit breakout envelopes, screws, straps, wrist extensions,
 cables, button mount and sensor films are illustrative presentation geometry.
 They do not establish mounting fit, usable bend radius, sensor strain relief,
 sewing dimensions, comfort or clearance on a particular wearer. The #1070 visual
@@ -27,3 +28,5 @@ see `assets/LICENSE.md`. Skin materials and assembly objects were added here.
 To rebuild: run `prepare_hands.py` then `scene.py` with Blender, after generating
 the three KiCad GLBs. The script saves the scene with its overview camera before
 rendering the overview and a separate close-up.
+
+After `scene.py`, run `details.py` with Blender to render the right-hand and hub close-ups from the saved assembly.

@@ -1,1 +1,1 @@
-(sym_lib_table (lib (name "PalmPilot") (type "KiCad") (uri "${KIPRJMOD}/../libraries/PalmPilot.kicad_sym") (options "") (descr "Carrier connector symbols")))
+(sym_lib_table (lib (name "PalmPilot") (type "KiCad") (uri "${KIPRJMOD}/../libraries/PalmPilot.kicad_sym") (options "") (descr "Direct-module support symbols")))
